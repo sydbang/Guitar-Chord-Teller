@@ -52,8 +52,12 @@
 		3B57CC0A26EFD81B008859E7 /* GuitarChordTeller */ = {
 			isa = PBXGroup;
 			children = (
+				3BA4561326FCD78E00591072 /* Service */,
+				3BA4561226FCD78800591072 /* Data */,
+				3BA4561126FCD78000591072 /* ViewModel */,
+				3BA4561026FCD77800591072 /* Model */,
 				3B57CC0B26EFD81B008859E7 /* GuitarChordTellerApp.swift */,
-				3B57CC0D26EFD81B008859E7 /* ContentView.swift */,
+				3BA4560F26FCD75A00591072 /* View */,
 				3B57CC0F26EFD81F008859E7 /* Assets.xcassets */,
 				3B57CC1426EFD81F008859E7 /* Info.plist */,
 				3B57CC1126EFD81F008859E7 /* Preview Content */,
@@ -67,6 +71,42 @@
 				3B57CC1226EFD81F008859E7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3BA4560F26FCD75A00591072 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3B57CC0D26EFD81B008859E7 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3BA4561026FCD77800591072 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3BA4561126FCD78000591072 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3BA4561226FCD78800591072 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		3BA4561326FCD78E00591072 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
