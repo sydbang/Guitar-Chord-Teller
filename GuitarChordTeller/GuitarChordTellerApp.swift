@@ -11,7 +11,7 @@ import SwiftUI
 struct GuitarChordTellerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            GuitarFretView()
         }
     }
 }

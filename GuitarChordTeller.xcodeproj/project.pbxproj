@@ -7,16 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B5502E22704F4E3007A0A56 /* GuitarChord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5502E12704F4E3007A0A56 /* GuitarChord.swift */; };
+		3B5502E62704F570007A0A56 /* GuitarChordModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5502E52704F570007A0A56 /* GuitarChordModel.swift */; };
 		3B57CC0C26EFD81B008859E7 /* GuitarChordTellerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B57CC0B26EFD81B008859E7 /* GuitarChordTellerApp.swift */; };
-		3B57CC0E26EFD81B008859E7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B57CC0D26EFD81B008859E7 /* ContentView.swift */; };
+		3B57CC0E26EFD81B008859E7 /* GuitarFretView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B57CC0D26EFD81B008859E7 /* GuitarFretView.swift */; };
 		3B57CC1026EFD81F008859E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B57CC0F26EFD81F008859E7 /* Assets.xcassets */; };
 		3B57CC1326EFD81F008859E7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B57CC1226EFD81F008859E7 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B5502E12704F4E3007A0A56 /* GuitarChord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuitarChord.swift; sourceTree = "<group>"; };
+		3B5502E52704F570007A0A56 /* GuitarChordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuitarChordModel.swift; sourceTree = "<group>"; };
 		3B57CC0826EFD81B008859E7 /* GuitarChordTeller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuitarChordTeller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B57CC0B26EFD81B008859E7 /* GuitarChordTellerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuitarChordTellerApp.swift; sourceTree = "<group>"; };
-		3B57CC0D26EFD81B008859E7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3B57CC0D26EFD81B008859E7 /* GuitarFretView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuitarFretView.swift; sourceTree = "<group>"; };
 		3B57CC0F26EFD81F008859E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B57CC1226EFD81F008859E7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3B57CC1426EFD81F008859E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,11 +56,11 @@
 		3B57CC0A26EFD81B008859E7 /* GuitarChordTeller */ = {
 			isa = PBXGroup;
 			children = (
+				3B57CC0B26EFD81B008859E7 /* GuitarChordTellerApp.swift */,
 				3BA4561326FCD78E00591072 /* Service */,
 				3BA4561226FCD78800591072 /* Data */,
 				3BA4561126FCD78000591072 /* ViewModel */,
 				3BA4561026FCD77800591072 /* Model */,
-				3B57CC0B26EFD81B008859E7 /* GuitarChordTellerApp.swift */,
 				3BA4560F26FCD75A00591072 /* View */,
 				3B57CC0F26EFD81F008859E7 /* Assets.xcassets */,
 				3B57CC1426EFD81F008859E7 /* Info.plist */,
@@ -76,7 +80,7 @@
 		3BA4560F26FCD75A00591072 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3B57CC0D26EFD81B008859E7 /* ContentView.swift */,
+				3B57CC0D26EFD81B008859E7 /* GuitarFretView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -84,6 +88,7 @@
 		3BA4561026FCD77800591072 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3B5502E12704F4E3007A0A56 /* GuitarChord.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -91,6 +96,7 @@
 		3BA4561126FCD78000591072 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				3B5502E52704F570007A0A56 /* GuitarChordModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -178,7 +184,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B57CC0E26EFD81B008859E7 /* ContentView.swift in Sources */,
+				3B5502E22704F4E3007A0A56 /* GuitarChord.swift in Sources */,
+				3B57CC0E26EFD81B008859E7 /* GuitarFretView.swift in Sources */,
+				3B5502E62704F570007A0A56 /* GuitarChordModel.swift in Sources */,
 				3B57CC0C26EFD81B008859E7 /* GuitarChordTellerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
