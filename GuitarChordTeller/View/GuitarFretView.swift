@@ -9,36 +9,47 @@ import SwiftUI
 
 struct GuitarFretView: View {
     
-    var chord = GuitarChord(firstString: "E", secondString: "B", thirdString: "G", fourthString: "D", fifthString: "A", sixthString: "E")
+    @EnvironmentObject var userChord:GuitarChordModel
     
     var scaleArray = ["C","C#","D","D#","E","F","F#","G","G#","A","A#","B","B#","C","C#","D","D#","E","F","F#","G","G#","A","A#","B","B#"]
     
     var body: some View {
         
         NavigationView {
-            HStack (spacing: 30){
-                Text(chord.sixthString!)
-                Text(chord.fifthString!)
-                Text(chord.fourthString!)
-                Text(chord.thirdString!)
-                Text(chord.secondString!)
-                Text(chord.firstString!)
+            VStack {
+                HStack (spacing: 30){
+                    Text(userChord.chord.sixthString!)
+                    Text(userChord.chord.fifthString!)
+                    Text(userChord.chord.fourthString!)
+                    Text(userChord.chord.thirdString!)
+                    Text(userChord.chord.secondString!)
+                    Text(userChord.chord.firstString!)
+                }
+                ScrollView {
+                    Text(String(userChord.baseIndex))
+                }
+                NavigationLink(
+                    destination: /*@START_MENU_TOKEN@*/Text("Destination")/*@END_MENU_TOKEN@*/,
+                    label: {
+                        /*@START_MENU_TOKEN@*/Text("Navigate")/*@END_MENU_TOKEN@*/
+                    })
             }
+            
         }
         
     }
     
-//    func setBaseIndex() {
-//        let index = array.firstIndex { (chord.grabBase()) -> Bool in
-//
-//            if array[index] == chord.grabBase() {
-//                return true
-//            } else {
-//                return false
-//            }
-//
-//        }
-//    }
+    func setBaseIndex() {
+        let index = scaleArray.firstIndex { (note) -> Bool in
+
+            if note == userChord.grabBase() {
+                return true
+            } else {
+                return false
+            }
+        }
+        userChord.baseIndex = index ?? 0
+    }
 }
 
 struct GuitarFretView_Previews: PreviewProvider {

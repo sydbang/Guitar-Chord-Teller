@@ -12,6 +12,7 @@ struct GuitarChordTellerApp: App {
     var body: some Scene {
         WindowGroup {
             GuitarFretView()
+                .environmentObject(GuitarChordModel())
         }
     }
 }

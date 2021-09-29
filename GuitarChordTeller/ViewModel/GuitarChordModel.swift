@@ -7,7 +7,36 @@
 
 import Foundation
 
-class GuitarChordModel {
-    var chords = [GuitarChord]()
+class GuitarChordModel: ObservableObject {
+    var chord = GuitarChord()
+    var baseIndex:Int
     
+    init() {
+        chord.firstString = "E"
+        chord.secondString = "B"
+        chord.thirdString = "G"
+        chord.fourthString = "D"
+        chord.fifthString = "A"
+        chord.sixthString = "E"
+        
+        baseIndex = 0
+    }
+   
+    
+    func grabBase() -> String {
+        if chord.sixthString != nil {
+            return chord.sixthString!
+        } else if chord.fifthString != nil {
+            return chord.fifthString!
+        } else if chord.fourthString != nil {
+            return chord.fourthString!
+        } else if chord.thirdString != nil {
+            return chord.thirdString!
+        } else if chord.secondString != nil {
+            return chord.secondString!
+        } else if chord.firstString != nil {
+            return chord.firstString!
+        } else { return "error"}
+        
+    }
 }
