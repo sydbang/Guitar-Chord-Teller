@@ -8,6 +8,9 @@
 import Foundation
 
 class GuitarChordModel: ObservableObject {
+    
+    @Published var firstTimeUser = true
+    
     var chord = GuitarChord()
     var baseIndex:Int
     
