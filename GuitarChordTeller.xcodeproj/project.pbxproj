@@ -13,6 +13,7 @@
 		3B57CC0E26EFD81B008859E7 /* GuitarFretView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B57CC0D26EFD81B008859E7 /* GuitarFretView.swift */; };
 		3B57CC1026EFD81F008859E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B57CC0F26EFD81F008859E7 /* Assets.xcassets */; };
 		3B57CC1326EFD81F008859E7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B57CC1226EFD81F008859E7 /* Preview Assets.xcassets */; };
+		3BE384542739A47B0004CD97 /* HowToView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE384532739A47B0004CD97 /* HowToView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		3B57CC0F26EFD81F008859E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B57CC1226EFD81F008859E7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3B57CC1426EFD81F008859E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BE384532739A47B0004CD97 /* HowToView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 			isa = PBXGroup;
 			children = (
 				3B57CC0D26EFD81B008859E7 /* GuitarFretView.swift */,
+				3BE384522739A35B0004CD97 /* Onboarding */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -113,6 +116,14 @@
 			children = (
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		3BE384522739A35B0004CD97 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				3BE384532739A47B0004CD97 /* HowToView.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +199,7 @@
 				3B57CC0E26EFD81B008859E7 /* GuitarFretView.swift in Sources */,
 				3B5502E62704F570007A0A56 /* GuitarChordModel.swift in Sources */,
 				3B57CC0C26EFD81B008859E7 /* GuitarChordTellerApp.swift in Sources */,
+				3BE384542739A47B0004CD97 /* HowToView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
