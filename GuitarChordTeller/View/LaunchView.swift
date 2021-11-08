@@ -8,8 +8,15 @@
 import SwiftUI
 
 struct LaunchView: View {
+    
+    @EnvironmentObject var model: GuitarChordModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        if model.firstTimeUser == true {
+            HowToView()
+        } else {
+            GuitarFretView()
+        }
     }
 }
 

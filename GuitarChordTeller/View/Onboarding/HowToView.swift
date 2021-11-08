@@ -50,7 +50,7 @@ struct HowToView: View {
                 if tabSelection == 0 {
                     tabSelection = 1
                 } else {
-                    // TODO: lower tab
+                    model.firstTimeUser = false
                 }
             } label: {
                 ZStack {
@@ -65,7 +65,11 @@ struct HowToView: View {
             }
             .accentColor(tabSelection == 0 ? blue : turquoise)
             .padding()
+            
+            Spacer()
         }
+        .background(tabSelection == 0 ? blue : turquoise)
+        .ignoresSafeArea()
     }
 }
 
