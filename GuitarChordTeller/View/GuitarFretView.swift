@@ -31,8 +31,19 @@ struct GuitarFretView: View {
                 NavigationLink(
                     destination: /*@START_MENU_TOKEN@*/Text("Destination")/*@END_MENU_TOKEN@*/,
                     label: {
-                        /*@START_MENU_TOKEN@*/Text("Navigate")/*@END_MENU_TOKEN@*/
-                    })
+                        ZStack {
+                            Rectangle()
+                                .foregroundColor(Constants.blue)
+                                .frame(height: 48)
+                                .cornerRadius(10)
+                            Text("Find Chord!")
+                                .bold()
+                                .padding()
+                                .accentColor(.white)
+                        }
+                        .padding()
+                    }
+                )
             }
             
         }

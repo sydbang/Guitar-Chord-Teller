@@ -12,18 +12,15 @@ struct HowToView: View {
     @EnvironmentObject var model: GuitarChordModel
     @State private var tabSelection = 0
     
-    private let blue = Color(red: 0/255, green: 130/255, blue: 167/255)
-    private let turquoise = Color(red: 55/255, green: 197/255, blue: 192/255)
-    
     var body: some View {
         VStack (spacing: 20) {
             TabView (selection: $tabSelection) {
                 // First tab
                 VStack {
-                    Text("Welcome to Guitar Chord Teller!")
+                    Text("Welcome to GCT!")
                         .bold()
                         .font(.title)
-                    Text("Guitar Chord Teller will help you find chords by simply putting your fingers on to the guitar fret!")
+                    Text("Guitar Chord Teller will help you find chords by simply putting your fingers on to the app's guitar fret!")
                 }
                 .multilineTextAlignment(.center)
                 .padding()
@@ -32,7 +29,7 @@ struct HowToView: View {
                 
                 // Second Tab
                 VStack (spacing: 20) {
-                    Text("You simply place your fingers on to the correct area by scrolling and tapping on the correct location on the guitar fret.")
+                    Text("You simply place your fingers on to the correct area by scrolling and tapping on the guitar fret.")
                         .bold()
                         .font(.title)
                     Text("We will tell you what chord you are holding when you press the find chord button!")
@@ -63,12 +60,12 @@ struct HowToView: View {
                         .padding()
                 }
             }
-            .accentColor(tabSelection == 0 ? blue : turquoise)
+            .accentColor(tabSelection == 0 ? Constants.blue : Constants.turquoise)
             .padding()
             
             Spacer()
         }
-        .background(tabSelection == 0 ? blue : turquoise)
+        .background(tabSelection == 0 ? Constants.blue : Constants.turquoise)
         .ignoresSafeArea()
     }
 }
