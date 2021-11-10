@@ -10,6 +10,7 @@ import Foundation
 class GuitarChordModel: ObservableObject {
     
     @Published var firstTimeUser = true
+    @Published var displayChord = "C Major"
     
     var chord = GuitarChord()
     var baseIndex:Int

@@ -29,7 +29,7 @@ struct GuitarFretView: View {
                     Text(String(userChord.baseIndex))
                 }
                 NavigationLink(
-                    destination: /*@START_MENU_TOKEN@*/Text("Destination")/*@END_MENU_TOKEN@*/,
+                    destination: ChordTellerView(),
                     label: {
                         ZStack {
                             Rectangle()
