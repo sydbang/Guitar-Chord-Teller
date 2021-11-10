@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+let fretCount = 24
+
 struct GuitarFretView: View {
     
     @EnvironmentObject var userChord:GuitarChordModel
@@ -26,7 +28,9 @@ struct GuitarFretView: View {
                     Text(userChord.chord.firstString!)
                 }
                 ScrollView {
-                    Text(String(userChord.baseIndex))
+                    ForEach(0..<fretCount) { index in
+                        GuitarFretRow()
+                    }
                 }
                 NavigationLink(
                     destination: ChordTellerView(),

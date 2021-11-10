@@ -18,6 +18,8 @@
 		3BE3845C2739C0E20004CD97 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE3845B2739C0E20004CD97 /* Constants.swift */; };
 		3BE3845F2739C7100004CD97 /* GuitarFretBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE3845E2739C7100004CD97 /* GuitarFretBoardView.swift */; };
 		3BE38491273C5E170004CD97 /* ChordTellerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE38490273C5E170004CD97 /* ChordTellerView.swift */; };
+		3BE38495273C652F0004CD97 /* GuitarFretButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE38494273C652F0004CD97 /* GuitarFretButton.swift */; };
+		3BE3849D273C68D40004CD97 /* GuitarFretRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE3849C273C68D40004CD97 /* GuitarFretRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		3BE3845B2739C0E20004CD97 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3BE3845E2739C7100004CD97 /* GuitarFretBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuitarFretBoardView.swift; sourceTree = "<group>"; };
 		3BE38490273C5E170004CD97 /* ChordTellerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChordTellerView.swift; sourceTree = "<group>"; };
+		3BE38494273C652F0004CD97 /* GuitarFretButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuitarFretButton.swift; sourceTree = "<group>"; };
+		3BE3849C273C68D40004CD97 /* GuitarFretRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuitarFretRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,8 @@
 				3BE384572739BD240004CD97 /* LaunchView.swift */,
 				3B57CC0D26EFD81B008859E7 /* GuitarFretView.swift */,
 				3BE38490273C5E170004CD97 /* ChordTellerView.swift */,
+				3BE38494273C652F0004CD97 /* GuitarFretButton.swift */,
+				3BE3849C273C68D40004CD97 /* GuitarFretRow.swift */,
 				3BE384522739A35B0004CD97 /* Onboarding */,
 				3BE3845E2739C7100004CD97 /* GuitarFretBoardView.swift */,
 			);
@@ -212,7 +218,9 @@
 				3B57CC0E26EFD81B008859E7 /* GuitarFretView.swift in Sources */,
 				3BE38491273C5E170004CD97 /* ChordTellerView.swift in Sources */,
 				3B5502E62704F570007A0A56 /* GuitarChordModel.swift in Sources */,
+				3BE3849D273C68D40004CD97 /* GuitarFretRow.swift in Sources */,
 				3BE3845F2739C7100004CD97 /* GuitarFretBoardView.swift in Sources */,
+				3BE38495273C652F0004CD97 /* GuitarFretButton.swift in Sources */,
 				3BE3845C2739C0E20004CD97 /* Constants.swift in Sources */,
 				3B57CC0C26EFD81B008859E7 /* GuitarChordTellerApp.swift in Sources */,
 				3BE384542739A47B0004CD97 /* HowToView.swift in Sources */,
