@@ -13,23 +13,17 @@ struct GuitarFretView: View {
     
     @EnvironmentObject var userChord:GuitarChordModel
     
-    var scaleArray = ["C","C#","D","D#","E","F","F#","G","G#","A","A#","B","B#","C","C#","D","D#","E","F","F#","G","G#","A","A#","B","B#"]
-    
     var body: some View {
         
         NavigationView {
             VStack {
-                HStack (spacing: 30){
-                    Text(userChord.chord.sixthString!)
-                    Text(userChord.chord.fifthString!)
-                    Text(userChord.chord.fourthString!)
-                    Text(userChord.chord.thirdString!)
-                    Text(userChord.chord.secondString!)
-                    Text(userChord.chord.firstString!)
-                }
+                
+                GuitarNoteView()
+                
                 ScrollView {
                     ForEach(0..<fretCount) { index in
                         GuitarFretRow()
+                            .padding(.bottom, CGFloat(fretCount - index)*4 + 1)
                     }
                 }
                 NavigationLink(
@@ -54,17 +48,7 @@ struct GuitarFretView: View {
         
     }
     
-    func setBaseIndex() {
-        let index = scaleArray.firstIndex { (note) -> Bool in
-
-            if note == userChord.grabBase() {
-                return true
-            } else {
-                return false
-            }
-        }
-        userChord.baseIndex = index ?? 0
-    }
+   
 }
 
 struct GuitarFretView_Previews: PreviewProvider {
