@@ -7,12 +7,11 @@
 
 import SwiftUI
 
-let stringCount = 6
 
 struct GuitarFretRow: View {
     var body: some View {
         HStack (spacing: 30) {
-            ForEach(0..<stringCount) { index in
+            ForEach(0..<Constants.stringCount) { index in
                 GuitarFretButton()
             }
         }

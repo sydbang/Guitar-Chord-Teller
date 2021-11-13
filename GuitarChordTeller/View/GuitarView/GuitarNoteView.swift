@@ -12,18 +12,35 @@ struct GuitarNoteView: View {
     
     var body: some View {
         HStack (spacing: 40){
+            
+            ForEach ((0..<Constants.stringCount).reversed(), id: \.self) { index in
+                
+                Button  {
+                    userChord.stringsEnabled[index].toggle()
+                } label: {
+                    if userChord.stringsEnabled[index] == true && userChord.chord.chordArray[index] != nil {
+                        Text(userChord.chord.chordArray[index]!)
+                    } else {
+                        Text("X")
+                    }
+                }
 
-                Text(userChord.chord.sixthString!)
+                
+                /*
+                Button
+                
+                
+                ({
+                            if userChord.stringEnabled[index] == true {
+                        Text(userChord.chord.chordArray[index])
+                    } else {
+                        Text("X")
+                    } }) {
+                    userChord.stringsEnabled[index].toggle()
+                }
+ */
+            }
 
-                Text(userChord.chord.fifthString!)
-
-                Text(userChord.chord.fourthString!)
-
-                Text(userChord.chord.thirdString!)
-
-                Text(userChord.chord.secondString!)
-
-                Text(userChord.chord.firstString!)
 
         }
     }

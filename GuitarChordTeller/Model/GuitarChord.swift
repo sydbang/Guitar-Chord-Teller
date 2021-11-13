@@ -9,10 +9,5 @@ import Foundation
 
 struct GuitarChord {
     
-    var firstString:String?
-    var secondString:String?
-    var thirdString:String?
-    var fourthString:String?
-    var fifthString:String?
-    var sixthString:String?
+    var chordArray: [String?] = []
 }
