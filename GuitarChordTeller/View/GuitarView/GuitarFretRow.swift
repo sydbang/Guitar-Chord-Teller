@@ -9,12 +9,19 @@ import SwiftUI
 
 
 struct GuitarFretRow: View {
+    
+    @EnvironmentObject var userChord: GuitarChordModel
+    
     var body: some View {
         HStack (spacing: 30) {
-            ForEach(0..<Constants.stringCount) { index in
-                GuitarFretButton()
+            ForEach((0..<Constants.stringCount).reversed(), id: \.self) { index in
+                
+                GuitarFretButton(enabled: userChord.stringsEnabled[index])
+                
+                
             }
         }
+        
     }
 }
 

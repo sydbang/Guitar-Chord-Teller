@@ -9,8 +9,10 @@ import SwiftUI
 
 struct GuitarFretButton: View {
     @State var pressed = false
+    @State var enabled: Bool
     
     var body: some View {
+        
         Button {
             pressed.toggle()
         } label: {
@@ -18,12 +20,13 @@ struct GuitarFretButton: View {
             
         }
         .accentColor(.gray)
+        .disabled(!enabled)
     }
 }
 
 struct GuitarFretButton_Previews: PreviewProvider {
     static var previews: some View {
-        GuitarFretButton()
+        GuitarFretButton(enabled: true)
             .previewLayout(.fixed(width: 100, height: 100))
     }
 }

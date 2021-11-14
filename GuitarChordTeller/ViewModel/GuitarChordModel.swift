@@ -12,7 +12,7 @@ class GuitarChordModel: ObservableObject {
     @Published var firstTimeUser = true
     @Published var displayChord = ""
     
-    @Published var stringsEnabled = [true,true,true,true,true,true]
+    @Published var stringsEnabled = [true,true,true,false,true,true]
     
     var chord = GuitarChord()
     var baseIndex:Int
