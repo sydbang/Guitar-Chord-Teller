@@ -9,10 +9,12 @@ import SwiftUI
 
 @main
 struct GuitarChordTellerApp: App {
+    var guitarChordModel = GuitarChordModel()
+    
     var body: some Scene {
         WindowGroup {
             LaunchView()
-                .environmentObject(GuitarChordModel())
+                .environmentObject(guitarChordModel)
         }
     }
 }

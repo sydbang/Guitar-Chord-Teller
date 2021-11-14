@@ -17,8 +17,6 @@ struct GuitarFretRow: View {
             ForEach((0..<Constants.stringCount).reversed(), id: \.self) { index in
                 
                 GuitarFretButton(enabled: userChord.stringsEnabled[index])
-                
-                
             }
         }
         

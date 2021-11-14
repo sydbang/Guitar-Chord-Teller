@@ -26,6 +26,7 @@ struct GuitarFretView: View {
                             .padding(.bottom, CGFloat(fretCount - index)*4 + 1)
                     }
                 }
+              
                 
                 NavigationLink(
                     destination: ChordTellerView(),

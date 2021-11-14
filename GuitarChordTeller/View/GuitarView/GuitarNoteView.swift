@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct GuitarNoteView: View {
+
+    
     @EnvironmentObject var userChord:GuitarChordModel
     
     var body: some View {
@@ -17,6 +19,7 @@ struct GuitarNoteView: View {
                 
                 Button  {
                     userChord.stringsEnabled[index].toggle()
+                    print(userChord.stringsEnabled)
                 } label: {
                     if userChord.stringsEnabled[index] == true && userChord.chord.chordArray[index] != nil {
                         Text(userChord.chord.chordArray[index]!)

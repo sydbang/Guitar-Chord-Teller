@@ -9,7 +9,8 @@ import SwiftUI
 
 struct GuitarFretButton: View {
     @State var pressed = false
-    @State var enabled: Bool
+    var enabled: Bool
+    // Do not make a @State variable when you want property to take in something and change data
     
     var body: some View {
         
@@ -19,7 +20,7 @@ struct GuitarFretButton: View {
             Image(systemName: pressed == false ? "circle" : "circle.fill")
             
         }
-        .accentColor(.gray)
+        .accentColor(.red)
         .disabled(!enabled)
     }
 }
