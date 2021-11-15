@@ -77,4 +77,5 @@ class GuitarChordModel: ObservableObject {
         }
         baseIndex = index ?? 0
     }
+    
 }

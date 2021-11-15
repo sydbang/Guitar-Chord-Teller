@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-let fretCount = 24
 
 struct GuitarFretView: View {
     
@@ -21,9 +20,9 @@ struct GuitarFretView: View {
                 GuitarNoteView()
                 
                 ScrollView {
-                    ForEach(0..<fretCount) { index in
+                    ForEach(0..<Constants.fretCount) { index in
                         GuitarFretRow()
-                            .padding(.bottom, CGFloat(fretCount - index)*4 + 1)
+                            .padding(.bottom, CGFloat(Constants.fretCount - index)*4 + 1)
                     }
                 }
               
