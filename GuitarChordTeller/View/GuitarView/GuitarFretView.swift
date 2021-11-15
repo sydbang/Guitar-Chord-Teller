@@ -16,16 +16,29 @@ struct GuitarFretView: View {
         
         NavigationView {
             VStack {
-                
+               
                 GuitarNoteView()
-                
-                ScrollView {
-                    ForEach(0..<Constants.fretCount) { index in
-                        GuitarFretRow()
-                            .padding(.bottom, CGFloat(Constants.fretCount - index)*4 + 1)
+                GeometryReader { geo in
+                    ScrollView {
+                        ForEach(0..<Constants.fretCount) { i in
+                            HStack (alignment: .center){
+                                Spacer()
+                                ForEach((0..<Constants.stringCount).reversed(), id: \.self) { j in
+                                    
+                                    GuitarFretButton(pressed: userChord.chord.fretPressed[i][j] , enabled: userChord.stringsEnabled[j])
+                                        .padding(.horizontal, geo.size.width/26)
+                                }
+                                Spacer()
+                            }
+                            .padding(.bottom, CGFloat(Constants.fretCount - i)*3 + 1)
+                            .padding(.horizontal)
+                            
+                        }
                     }
                 }
-              
+                
+                
+                
                 
                 NavigationLink(
                     destination: ChordTellerView(),
@@ -49,7 +62,7 @@ struct GuitarFretView: View {
         
     }
     
-   
+    
 }
 
 struct GuitarFretView_Previews: PreviewProvider {
