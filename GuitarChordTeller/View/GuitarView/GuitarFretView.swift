@@ -27,7 +27,9 @@ struct GuitarFretView: View {
                                     
                                     GuitarFretButton(
                                         pressed: userChord.fretPressed[i][j] ,
-                                        enabled: userChord.stringsEnabled[j], 
+                                        enabled: userChord.stringsEnabled[j],
+                                        fret: i,
+                                        string: j,
                                         toggleFunction: {userChord.fretPressed[i][j].toggle()}
                                     )
                                         .padding(.horizontal, geo.size.width/26)

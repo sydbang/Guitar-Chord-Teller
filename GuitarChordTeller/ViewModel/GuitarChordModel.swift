@@ -12,7 +12,7 @@ class GuitarChordModel: ObservableObject {
     @Published var firstTimeUser = true
     @Published var displayChord = ""
     
-    @Published var stringsEnabled = [true,true,true,false,true,true]
+    @Published var stringsEnabled = [true,true,true,true,true,true]
     
     @Published var fretPressed = Array(repeating: Array(repeating: false, count: Constants.stringCount), count: Constants.fretCount)
     
@@ -31,14 +31,6 @@ class GuitarChordModel: ObservableObject {
         chord.chordArray.append(scaleArray[9])
         chord.chordArray.append(scaleArray[4])
         
-        /*
-        chord.firstString = scaleArray[4]
-        chord.secondString = scaleArray[11]
-        chord.thirdString = scaleArray[7]
-        chord.fourthString = scaleArray[2]
-        chord.fifthString = scaleArray[9]
-        chord.sixthString = scaleArray[4]
-        */
         baseIndex = 0
     }
    
@@ -51,21 +43,7 @@ class GuitarChordModel: ObservableObject {
             }
         }
         return ""
-        /*
-        if chord.sixthString != nil {
-            return chord.chordArray[5]!
-        } else if chord.fifthString != nil {
-            return chord.fifthString!
-        } else if chord.fourthString != nil {
-            return chord.fourthString!
-        } else if chord.thirdString != nil {
-            return chord.thirdString!
-        } else if chord.secondString != nil {
-            return chord.secondString!
-        } else if chord.firstString != nil {
-            return chord.firstString!
-        } else { return "error"}
-        */
+        
     }
     
     func setBaseIndex() {
@@ -80,4 +58,13 @@ class GuitarChordModel: ObservableObject {
         baseIndex = index ?? 0
     }
     
+    func newButtonPressed(fretNum: Int, stringIndex: Int) {
+        for fret in 0..<Constants.fretCount {
+            if fret == fretNum {
+                continue
+            } else {
+                fretPressed[fret][stringIndex] = false
+            }
+        }
+    }
 }

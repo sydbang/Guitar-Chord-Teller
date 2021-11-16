@@ -13,8 +13,8 @@ struct GuitarFretButton: View {
     
     var pressed: Bool
     var enabled: Bool
-    //var fret: Int
-    //var string: Int
+    var fret: Int
+    var string: Int
 
     
     var toggleFunction: () -> ()
@@ -26,6 +26,7 @@ struct GuitarFretButton: View {
         Button {
             //userChord.fretPressed[fret][string].toggle()
             toggleFunction()
+            userChord.newButtonPressed(fretNum: fret, stringIndex: string)
         } label: {
             Image(systemName: pressed == false ? "circle" : "circle.fill")
             

@@ -36,21 +36,6 @@ struct GuitarNoteView: View {
                         Text("X")
                     }
                 }
-
-                
-                /*
-                Button
-                
-                
-                ({
-                            if userChord.stringEnabled[index] == true {
-                        Text(userChord.chord.chordArray[index])
-                    } else {
-                        Text("X")
-                    } }) {
-                    userChord.stringsEnabled[index].toggle()
-                }
- */
             }
 
 
