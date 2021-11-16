@@ -16,28 +16,28 @@ class GuitarChordModel: ObservableObject {
     
     @Published var fretPressed = Array(repeating: Array(repeating: false, count: Constants.stringCount), count: Constants.fretCount)
     
+    @Published var chordArray: [String?] = []
+    
     var chord = GuitarChord()
-    var baseIndex:Int
+    @Published var baseIndex:Int = 0
     
-    var scaleArray = ["C","C#","D","D#","E","F","F#","G","G#","A","A#","B","B#","C","C#","D","D#","E","F","F#","G","G#","A","A#","B","B#"]
-    
+
     
     init() {
         
-        chord.chordArray.append(scaleArray[4])
-        chord.chordArray.append(scaleArray[11])
-        chord.chordArray.append(scaleArray[7])
-        chord.chordArray.append(scaleArray[2])
-        chord.chordArray.append(scaleArray[9])
-        chord.chordArray.append(scaleArray[4])
-        
-        baseIndex = 0
+        chordArray.append(chord.scaleArray[4])
+        chordArray.append(chord.scaleArray[11])
+        chordArray.append(chord.scaleArray[7])
+        chordArray.append(chord.scaleArray[2])
+        chordArray.append(chord.scaleArray[9])
+        chordArray.append(chord.scaleArray[4])
+
     }
    
     
     func grabBase() -> String {
         
-        for note in chord.chordArray {
+        for note in chordArray {
             if note != nil {
                 return note!
             }
@@ -47,7 +47,7 @@ class GuitarChordModel: ObservableObject {
     }
     
     func setBaseIndex() {
-        let index = scaleArray.firstIndex { (note) -> Bool in
+        let index = chord.scaleArray.firstIndex { (note) -> Bool in
 
             if note == grabBase() {
                 return true

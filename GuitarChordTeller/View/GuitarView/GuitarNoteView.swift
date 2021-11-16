@@ -25,10 +25,6 @@ struct GuitarNoteView: View {
                             userChord.fretPressed[j][index] = false
                         }
                     }
-
-                    print("pressed: \(userChord.fretPressed)")
-
-                    print(userChord.stringsEnabled)
                 } label: {
                     if userChord.stringsEnabled[index] == true && userChord.chord.chordArray[index] != nil {
                         Text(userChord.chord.chordArray[index]!)

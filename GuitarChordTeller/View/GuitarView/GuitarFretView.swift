@@ -33,7 +33,6 @@ struct GuitarFretView: View {
                                         toggleFunction: {userChord.fretPressed[i][j].toggle()}
                                     )
                                         .padding(.horizontal, geo.size.width/26)
-                                            
                                 }
                                 Spacer()
                             }
