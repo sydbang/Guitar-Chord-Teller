@@ -8,14 +8,24 @@
 import SwiftUI
 
 struct GuitarFretButton: View {
-    @State var pressed = false
+    
+    @EnvironmentObject var userChord:GuitarChordModel
+    
+    var pressed: Bool
     var enabled: Bool
+    //var fret: Int
+    //var string: Int
+
+    
+    var toggleFunction: () -> ()
+    
     // Do not make a @State variable when you want property to take in something and change data
     
     var body: some View {
         
         Button {
-            pressed.toggle()
+            //userChord.fretPressed[fret][string].toggle()
+            toggleFunction()
         } label: {
             Image(systemName: pressed == false ? "circle" : "circle.fill")
             
@@ -27,9 +37,3 @@ struct GuitarFretButton: View {
     }
 }
 
-struct GuitarFretButton_Previews: PreviewProvider {
-    static var previews: some View {
-        GuitarFretButton(enabled: true)
-            .previewLayout(.fixed(width: 100, height: 100))
-    }
-}

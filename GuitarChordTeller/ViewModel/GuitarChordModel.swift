@@ -14,6 +14,8 @@ class GuitarChordModel: ObservableObject {
     
     @Published var stringsEnabled = [true,true,true,false,true,true]
     
+    @Published var fretPressed = Array(repeating: Array(repeating: false, count: Constants.stringCount), count: Constants.fretCount)
+    
     var chord = GuitarChord()
     var baseIndex:Int
     

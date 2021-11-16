@@ -25,8 +25,13 @@ struct GuitarFretView: View {
                                 Spacer()
                                 ForEach((0..<Constants.stringCount).reversed(), id: \.self) { j in
                                     
-                                    GuitarFretButton(pressed: userChord.chord.fretPressed[i][j] , enabled: userChord.stringsEnabled[j])
+                                    GuitarFretButton(
+                                        pressed: userChord.fretPressed[i][j] ,
+                                        enabled: userChord.stringsEnabled[j], 
+                                        toggleFunction: {userChord.fretPressed[i][j].toggle()}
+                                    )
                                         .padding(.horizontal, geo.size.width/26)
+                                            
                                 }
                                 Spacer()
                             }

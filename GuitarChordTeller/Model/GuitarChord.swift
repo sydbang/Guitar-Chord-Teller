@@ -11,5 +11,5 @@ struct GuitarChord {
     
     var chordArray: [String?] = []
     
-    var fretPressed = Array(repeating: Array(repeating: false, count: Constants.stringCount), count: Constants.fretCount)
+    
 }
