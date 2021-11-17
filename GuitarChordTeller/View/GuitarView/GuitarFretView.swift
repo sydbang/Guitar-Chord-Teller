@@ -20,7 +20,7 @@ struct GuitarFretView: View {
                 GuitarNoteView()
                 GeometryReader { geo in
                     ScrollView {
-                        ForEach(0..<Constants.fretCount) { i in
+                        ForEach(0 ..< Constants.fretCount) { i in
                             HStack (alignment: .center){
                                 Spacer()
                                 ForEach((0..<Constants.stringCount).reversed(), id: \.self) { j in

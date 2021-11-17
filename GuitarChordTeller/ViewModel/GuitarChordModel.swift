@@ -62,7 +62,8 @@ class GuitarChordModel: ObservableObject {
     func newButtonPressed(fretNum: Int, stringIndex: Int) {
         for fret in 0..<Constants.fretCount {
             if fret == fretNum {
-                pressedFretIndex[stringIndex] = fretNum
+                pressedFretIndex[stringIndex] = fretNum + 1 //in real life fret number start from 1
+                
                 continue
             } else {
                 fretPressed[fret][stringIndex] = false
@@ -70,7 +71,20 @@ class GuitarChordModel: ObservableObject {
         }
     }
     
-    func updateNote(stringIndex: Int, pressedFretIndex: Int, CurrentNote: String) {
-        // TODO
+    func updateNote(PressedFretIndex: Int, CurrentNote: String) -> String {
+        
+        var currentIndex: Int = 0
+        // Grab scale index
+        for index in 0..<chord.scaleArray.count {
+            if CurrentNote == chord.scaleArray[index] {
+                currentIndex = index
+            }
+        }
+        
+        let newIndex = PressedFretIndex + currentIndex 
+        let trueIndex = newIndex % chord.scaleArray.count
+        
+        return chord.scaleArray[trueIndex]
+        
     }
 }
