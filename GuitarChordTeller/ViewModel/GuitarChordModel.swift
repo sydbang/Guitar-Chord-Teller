@@ -20,7 +20,6 @@ class GuitarChordModel: ObservableObject {
     @Published var chordArray: [String?] = []
     
     var chord = GuitarChord()
-    @Published var baseIndex:Int = 0
     
     @Published var pressedFretIndex: [Int] = [0,0,0,0,0,0]
 
@@ -55,7 +54,7 @@ class GuitarChordModel: ObservableObject {
         
     }
      
-    func setBaseIndex() {
+    func setBaseIndex() -> Int {
         let index = chord.scaleArray.firstIndex { (note) -> Bool in
 
             if note == grabBase() {
@@ -64,11 +63,66 @@ class GuitarChordModel: ObservableObject {
                 return false
             }
         }
-        baseIndex = index ?? 0
+        return index ?? 0
+    }
+    
+    func setChord() -> String {
+        let baseIndex = setBaseIndex()
+        var noteIndex:[Int] = []
+        var fromBaseIndex:[Int] = []
+        
+        for index in 0..<Constants.stringCount {
+            if stringsEnabled[index] {
+                for j in 0..<chord.scaleArray.count {
+                    if chordArray[index] == chord.scaleArray[j] {
+                        noteIndex.append(j)
+                    }
+                }
+            } else {
+                continue
+            }
+            
+        }
+
+        for eachNoteI in noteIndex {
+            if eachNoteI == baseIndex {
+                fromBaseIndex.append(eachNoteI - baseIndex)
+            } else if eachNoteI < baseIndex {
+                fromBaseIndex.append(eachNoteI + chord.scaleArray.count - baseIndex)
+            } else {
+                fromBaseIndex.append(eachNoteI-baseIndex)
+            }
+        }
+        print (fromBaseIndex)
+        if [0, 4, 7, 11].allSatisfy(fromBaseIndex.contains) {
+            return "Major 7"
+        } else if [0, 4, 7, 10].allSatisfy(fromBaseIndex.contains) {
+            return "Dominant 7"
+        } else if [0, 3, 7, 10].allSatisfy(fromBaseIndex.contains) {
+            return "Minor 7"
+        } else if [0, 3, 6, 10].allSatisfy(fromBaseIndex.contains) {
+            return "Minor 7 flat 5"
+        } else if [0, 3, 6, 9].allSatisfy(fromBaseIndex.contains) {
+            return "Diminished 7"
+        } else if [0, 2, 7].allSatisfy(fromBaseIndex.contains) {
+            return "Suspended 2"
+        } else if [0, 5, 7].allSatisfy(fromBaseIndex.contains) {
+            return "Suspended 4"
+        } else if [0, 3, 6].allSatisfy(fromBaseIndex.contains) {
+            return "Diminished"
+        } else if [0, 3, 7].allSatisfy(fromBaseIndex.contains) {
+            return "Minor"
+        } else if [0, 4, 8].allSatisfy(fromBaseIndex.contains) {
+            return "Augmented"
+        } else if [0, 4, 7].allSatisfy(fromBaseIndex.contains) {
+            return "Major"
+        } else {
+            return "Base Chord undefined"
+        }
     }
     
     func getChord() {
-        displayChord = grabBase()
+        displayChord = grabBase() + " " + setChord()
     }
     
     func newButtonPressed(fretNum: Int, stringIndex: Int) {

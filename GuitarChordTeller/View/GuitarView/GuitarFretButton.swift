@@ -29,6 +29,8 @@ struct GuitarFretButton: View {
             userChord.newButtonPressed(fretNum: fret, stringIndex: string)
             if userChord.fretPressed[fret][string] == false {
                 userChord.pressedFretIndex[string] = 0
+                userChord.chordArray[string] = userChord.stringArray[string]
+                //chordArray[stringIndex] = stringArray[stringIndex]!
             }
         } label: {
             Image(systemName: pressed == false ? "circle" : "circle.fill")
