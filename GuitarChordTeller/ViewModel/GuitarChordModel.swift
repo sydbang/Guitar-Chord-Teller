@@ -16,6 +16,7 @@ class GuitarChordModel: ObservableObject {
     
     @Published var fretPressed = Array(repeating: Array(repeating: false, count: Constants.stringCount), count: Constants.fretCount)
     
+    @Published var stringArray: [String?] = []
     @Published var chordArray: [String?] = []
     
     var chord = GuitarChord()
@@ -32,6 +33,13 @@ class GuitarChordModel: ObservableObject {
         chordArray.append(chord.scaleArray[2])
         chordArray.append(chord.scaleArray[9])
         chordArray.append(chord.scaleArray[4])
+        
+        stringArray.append(chord.scaleArray[4])
+        stringArray.append(chord.scaleArray[11])
+        stringArray.append(chord.scaleArray[7])
+        stringArray.append(chord.scaleArray[2])
+        stringArray.append(chord.scaleArray[9])
+        stringArray.append(chord.scaleArray[4])
 
     }
    
@@ -67,7 +75,7 @@ class GuitarChordModel: ObservableObject {
         for fret in 0..<Constants.fretCount {
             if fret == fretNum {
                 pressedFretIndex[stringIndex] = fretNum + 1 //in real life fret number start from 1
-                
+                chordArray[stringIndex] = updateNote(PressedFretIndex: pressedFretIndex[stringIndex], CurrentNote: stringArray[stringIndex]!)
                 continue
             } else {
                 fretPressed[fret][stringIndex] = false
@@ -75,6 +83,7 @@ class GuitarChordModel: ObservableObject {
         }
     }
     
+    //userChord.chordArray[index] = userChord.updateNote(PressedFretIndex: userChord.pressedFretIndex[index], CurrentNote: userChord.chordArray[index]!)
     func updateNote(PressedFretIndex: Int, CurrentNote: String) -> String {
         
         var currentIndex: Int = 0

@@ -26,12 +26,15 @@ struct GuitarNoteView: View {
                             userChord.pressedFretIndex[index] = 0
                         }
                     }
+
+                    
                 } label: {
-                    if userChord.stringsEnabled[index] == true && userChord.chordArray[index] != nil {
+                    if userChord.stringsEnabled[index] == true && userChord.chordArray[index] != nil && userChord.stringArray[index] != nil {
                         if userChord.pressedFretIndex[index] == 0 {
-                            Text(userChord.chordArray[index]!)
+                            Text(userChord.stringArray[index]!)
                         } else {
-                            Text(userChord.updateNote(PressedFretIndex: userChord.pressedFretIndex[index], CurrentNote: userChord.chordArray[index]!))
+
+                            Text(userChord.chordArray[index]!)
                         }
                         
                     } else {
