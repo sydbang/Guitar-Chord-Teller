@@ -47,7 +47,8 @@ struct GuitarFretView: View {
                 
                 
                 NavigationLink(
-                    destination: ChordTellerView(),
+                    destination: ChordTellerView()
+                        .onAppear(perform: userChord.getChord),
                     label: {
                         ZStack {
                             Rectangle()

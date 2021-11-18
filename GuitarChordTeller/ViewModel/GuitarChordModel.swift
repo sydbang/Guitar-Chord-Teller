@@ -38,9 +38,9 @@ class GuitarChordModel: ObservableObject {
     
     func grabBase() -> String {
         
-        for note in chordArray {
-            if note != nil {
-                return note!
+        for index in ((0..<stringsEnabled.count).reversed()) {
+            if stringsEnabled[index] {
+                return chordArray[index]!
             }
         }
         return ""
@@ -57,6 +57,10 @@ class GuitarChordModel: ObservableObject {
             }
         }
         baseIndex = index ?? 0
+    }
+    
+    func getChord() {
+        displayChord = grabBase()
     }
     
     func newButtonPressed(fretNum: Int, stringIndex: Int) {
