@@ -9,15 +9,15 @@ import SwiftUI
 
 struct GuitarNoteView: View {
 
-    var spacingIn: CGFloat
+  
     
     @EnvironmentObject var userChord:GuitarChordModel
     
     var body: some View {
-        HStack (spacing: spacingIn){
+        HStack {
             
             ForEach ((0..<Constants.stringCount).reversed(), id: \.self) { index in
-                
+                Spacer()
                 Button  {
                     userChord.stringsEnabled[index].toggle()
                     
@@ -43,6 +43,7 @@ struct GuitarNoteView: View {
                     }
                 }
                 .accentColor(Constants.blue)
+                Spacer()
             }
 
 
