@@ -20,6 +20,7 @@
 		3BE38495273C652F0004CD97 /* GuitarFretButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE38494273C652F0004CD97 /* GuitarFretButton.swift */; };
 		3BE384A327400FFE0004CD97 /* GuitarNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE384A227400FFE0004CD97 /* GuitarNoteView.swift */; };
 		3BE384AF27471E7E0004CD97 /* GuitarLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE384AE27471E7D0004CD97 /* GuitarLineView.swift */; };
+		3BE384B22747279E0004CD97 /* GuitarDotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE384B12747279D0004CD97 /* GuitarDotView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		3BE38494273C652F0004CD97 /* GuitarFretButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuitarFretButton.swift; sourceTree = "<group>"; };
 		3BE384A227400FFE0004CD97 /* GuitarNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuitarNoteView.swift; sourceTree = "<group>"; };
 		3BE384AE27471E7D0004CD97 /* GuitarLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuitarLineView.swift; sourceTree = "<group>"; };
+		3BE384B12747279D0004CD97 /* GuitarDotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuitarDotView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 				3BE38494273C652F0004CD97 /* GuitarFretButton.swift */,
 				3BE384A227400FFE0004CD97 /* GuitarNoteView.swift */,
 				3BE384AE27471E7D0004CD97 /* GuitarLineView.swift */,
+				3BE384B12747279D0004CD97 /* GuitarDotView.swift */,
 			);
 			path = GuitarView;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BE384B22747279E0004CD97 /* GuitarDotView.swift in Sources */,
 				3B5502E22704F4E3007A0A56 /* GuitarChord.swift in Sources */,
 				3BE384582739BD240004CD97 /* LaunchView.swift in Sources */,
 				3B57CC0E26EFD81B008859E7 /* GuitarFretView.swift in Sources */,
