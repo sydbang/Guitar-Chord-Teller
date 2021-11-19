@@ -50,6 +50,7 @@ struct GuitarFretView: View {
                                     .padding(.vertical, CGFloat(Constants.fretCount - i)*2 + 1)
                                     .padding(.horizontal, geo.size.width/14)
                                     
+                                    GuitarDotView(fretNum: i)
                                 }
   
                             }
