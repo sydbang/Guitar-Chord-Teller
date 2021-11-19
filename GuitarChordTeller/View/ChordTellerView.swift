@@ -14,7 +14,7 @@ struct ChordTellerView: View {
         // Display the chord
         Text(userChord.displayChord)
             .font(.system(size: 40))
-            .lineLimit(1)
+            .lineLimit(2)
             .padding(.horizontal, 20)
     }
 }

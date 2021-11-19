@@ -67,9 +67,10 @@ class GuitarChordModel: ObservableObject {
     }
     
     func setChord() -> String {
-        let baseIndex = setBaseIndex()
+        var baseIndex = setBaseIndex()
         var noteIndex:[Int] = []
         var fromBaseIndex:[Int] = []
+        var stringToReturn = ""
         
         for index in 0..<Constants.stringCount {
             if stringsEnabled[index] {
@@ -81,9 +82,46 @@ class GuitarChordModel: ObservableObject {
             } else {
                 continue
             }
-            
         }
-
+        
+        for z in 0..<noteIndex.count {
+            fromBaseIndex = getIndexArrayFromBase(noteIndex: noteIndex, baseIndex: baseIndex)
+            print (fromBaseIndex)
+            stringToReturn = checkChord(fromBaseIndex: fromBaseIndex)
+            if !stringToReturn.contains("Base / ") {
+                if z != 0 {
+                    print(z)
+                    let realRoot = chord.scaleArray[noteIndex[z]]
+                    stringToReturn = "\(realRoot) \(stringToReturn) / Base"
+                    break
+                } else {
+                    break
+                }
+            } else {
+                baseIndex = setNewBaseIndex(noteIndex: noteIndex, currentIndexOfBase: z)
+                if baseIndex == -1 {
+                    return "Base / undefined Chord"
+                }
+            }
+        }
+        
+        return stringToReturn
+    }
+    
+    func setNewBaseIndex(noteIndex: [Int], currentIndexOfBase: Int) -> Int {
+        // Grabs note index that has already been written from func setChord
+        if currentIndexOfBase < (noteIndex.count-1) {
+            return noteIndex[currentIndexOfBase+1]
+        }
+        else {
+            return -1
+        }
+    }
+    
+    func getIndexArrayFromBase(noteIndex: [Int], baseIndex: Int) -> [Int] {
+        
+        var fromBaseIndex: [Int] = []
+        
         for eachNoteI in noteIndex {
             if eachNoteI == baseIndex {
                 fromBaseIndex.append(eachNoteI - baseIndex)
@@ -93,7 +131,10 @@ class GuitarChordModel: ObservableObject {
                 fromBaseIndex.append(eachNoteI-baseIndex)
             }
         }
-        print (fromBaseIndex)
+        return fromBaseIndex
+    }
+    
+    func checkChord(fromBaseIndex: [Int]) -> String {
         if [0, 4, 7, 10, 2, 5].allSatisfy(fromBaseIndex.contains) {
             return "Dominant 13"
         } else if [0, 4, 7, 10, 2, 3].allSatisfy(fromBaseIndex.contains) {
@@ -125,12 +166,19 @@ class GuitarChordModel: ObservableObject {
         } else if [0, 4, 7].allSatisfy(fromBaseIndex.contains) {
             return "Major"
         } else {
-            return "Base Chord undefined"
+            return "Base / "
         }
     }
     
     func getChord() {
-        displayChord = grabBase() + " " + setChord()
+        let baseInfo = grabBase()
+        let chordInfo = setChord()
+        
+        if chordInfo.contains("Base") {
+            displayChord = chordInfo + " " + baseInfo
+        } else {
+            displayChord = baseInfo + " " + chordInfo
+        }
     }
     
     func newButtonPressed(fretNum: Int, stringIndex: Int) {
