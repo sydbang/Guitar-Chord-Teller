@@ -9,11 +9,12 @@ import SwiftUI
 
 struct GuitarNoteView: View {
 
+    var spacingIn: CGFloat
     
     @EnvironmentObject var userChord:GuitarChordModel
     
     var body: some View {
-        HStack (spacing: 40){
+        HStack (spacing: spacingIn){
             
             ForEach ((0..<Constants.stringCount).reversed(), id: \.self) { index in
                 
@@ -29,7 +30,7 @@ struct GuitarNoteView: View {
 
                     
                 } label: {
-                    if userChord.stringsEnabled[index] == true && userChord.chordArray[index] != nil && userChord.stringArray[index] != nil {
+                    if userChord.stringsEnabled[index] == true {
                         if userChord.pressedFretIndex[index] == 0 {
                             Text(userChord.stringArray[index]!)
                         } else {
@@ -41,6 +42,7 @@ struct GuitarNoteView: View {
                         Text("X")
                     }
                 }
+                .accentColor(Constants.blue)
             }
 
 
@@ -48,8 +50,3 @@ struct GuitarNoteView: View {
     }
 }
 
-struct GuitarNoteView_Previews: PreviewProvider {
-    static var previews: some View {
-        GuitarNoteView()
-    }
-}

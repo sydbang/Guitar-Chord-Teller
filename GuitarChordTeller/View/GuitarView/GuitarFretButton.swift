@@ -22,24 +22,46 @@ struct GuitarFretButton: View {
     // Do not make a @State variable when you want property to take in something and change data
     
     var body: some View {
-        
-        Button {
-            //userChord.fretPressed[fret][string].toggle()
-            toggleFunction()
-            userChord.newButtonPressed(fretNum: fret, stringIndex: string)
-            if userChord.fretPressed[fret][string] == false {
-                userChord.pressedFretIndex[string] = 0
-                userChord.chordArray[string] = userChord.stringArray[string]
-                //chordArray[stringIndex] = stringArray[stringIndex]!
+        //GeometryReader {geo in
+            ZStack {
+                /*
+                Path({ path in
+                    path.move(to: CGPoint(x: geo.size.width/2, y: -geo.size.height*6))
+                    path.addLine(to: CGPoint(x: geo.size.width/2, y: geo.size.height*6))
+                    
+                    
+                })
+                .stroke(Color.black, style: StrokeStyle(lineWidth: 2))
+                */
+                
+                Button {
+                    //userChord.fretPressed[fret][string].toggle()
+                    toggleFunction()
+                    userChord.newButtonPressed(fretNum: fret, stringIndex: string)
+                    if userChord.fretPressed[fret][string] == false {
+                        userChord.pressedFretIndex[string] = 0
+                        userChord.chordArray[string] = userChord.stringArray[string]
+                        //chordArray[stringIndex] = stringArray[stringIndex]!
+                    }
+                } label: {
+                    /*
+                    if pressed {
+                        Circle()
+                    } else {
+                        Circle()
+                            .stroke()
+                    }
+ */
+                    Image(systemName: pressed == false ? "circle" : "circle.fill")
+                    
+                }
+                .accentColor(Constants.turquoise)
+                .disabled(!enabled)
             }
-        } label: {
-            Image(systemName: pressed == false ? "circle" : "circle.fill")
             
-        }
-        .accentColor(.red)
-        .disabled(!enabled)
-        
-        
+            
+            
+        //}
     }
 }
 

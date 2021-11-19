@@ -94,7 +94,15 @@ class GuitarChordModel: ObservableObject {
             }
         }
         print (fromBaseIndex)
-        if [0, 4, 7, 11].allSatisfy(fromBaseIndex.contains) {
+        if [0, 4, 7, 10, 2, 5].allSatisfy(fromBaseIndex.contains) {
+            return "Dominant 13"
+        } else if [0, 4, 7, 10, 2, 3].allSatisfy(fromBaseIndex.contains) {
+            return "Dominant 11"
+        } else if [0, 4, 7, 10, 2].allSatisfy(fromBaseIndex.contains) {
+            return "Dominant 9"
+        } else if [0, 4, 7, 11, 2].allSatisfy(fromBaseIndex.contains) {
+            return "Major 9"
+        } else if [0, 4, 7, 11].allSatisfy(fromBaseIndex.contains) {
             return "Major 7"
         } else if [0, 4, 7, 10].allSatisfy(fromBaseIndex.contains) {
             return "Dominant 7"
