@@ -16,7 +16,7 @@ struct GuitarNoteView: View {
     var body: some View {
         HStack {
             
-            ForEach ((0..<Constants.stringCount).reversed(), id: \.self) { index in
+            ForEach (userChord.stringsIndex, id: \.self) { index in
                 Spacer()
                 Button  {
                     userChord.stringsEnabled[index].toggle()

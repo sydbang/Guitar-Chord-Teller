@@ -22,6 +22,10 @@ class GuitarChordModel: ObservableObject {
     var chord = GuitarChord()
     
     @Published var pressedFretIndex: [Int] = [0,0,0,0,0,0]
+    
+    @Published var leftHanded = false
+    
+    @Published var stringsIndex: [Int] = []
 
     
     init() {
@@ -39,6 +43,8 @@ class GuitarChordModel: ObservableObject {
         stringArray.append(chord.scaleArray[2])
         stringArray.append(chord.scaleArray[9])
         stringArray.append(chord.scaleArray[4])
+        
+        updateStringIndex()
 
     }
    
@@ -219,5 +225,9 @@ class GuitarChordModel: ObservableObject {
                 pressedFretIndex[stringIndex] = 0
             }
         }
+    }
+    
+    func updateStringIndex() {
+        stringsIndex = (leftHanded ? [0, 1, 2, 3, 4, 5]:[5, 4, 3, 2, 1, 0])
     }
 }

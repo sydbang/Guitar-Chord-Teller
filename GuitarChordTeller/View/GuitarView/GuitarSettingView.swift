@@ -10,7 +10,7 @@ import SwiftUI
 struct GuitarSettingView: View {
     
     @EnvironmentObject var userChord:GuitarChordModel
-    @State var leftHanded = false
+    
     
     var body: some View {
         HStack {
@@ -20,17 +20,20 @@ struct GuitarSettingView: View {
                 Text("clear all")
             }
             Spacer()
-            /*
-             //TODo leftie
-            Toggle(isOn: $leftHanded, label: {
+            
+            //TODo leftie
+            Toggle(isOn: $userChord.leftHanded, label: {
                 Text("Left Handed View")
                     .frame(maxWidth: .infinity, alignment: .trailing)
                     .foregroundColor(Constants.blue)
             })
-                .toggleStyle(SwitchToggleStyle(tint: Constants.blue))
-            */
+            .toggleStyle(SwitchToggleStyle(tint: Constants.blue))
+            
         }
-
+        .onChange(of: userChord.leftHanded, perform: { value in
+            userChord.updateStringIndex()
+        })
+        
     }
 }
 

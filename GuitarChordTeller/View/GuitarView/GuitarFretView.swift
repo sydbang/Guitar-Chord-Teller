@@ -11,7 +11,7 @@ import SwiftUI
 struct GuitarFretView: View {
     
     @EnvironmentObject var userChord:GuitarChordModel
-    
+   
     var body: some View {
         
         NavigationView {
@@ -36,7 +36,7 @@ struct GuitarFretView: View {
                                         .padding(.horizontal, geo.size.width/7)
                                     HStack (alignment: .center){
                                         
-                                        ForEach((0..<Constants.stringCount).reversed(), id: \.self) { j in
+                                        ForEach(userChord.stringsIndex, id: \.self) { j in
                                             Spacer()
                                             GuitarFretButton(
                                                 pressed: userChord.fretPressed[i][j] ,
