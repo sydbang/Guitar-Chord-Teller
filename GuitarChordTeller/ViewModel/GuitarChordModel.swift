@@ -210,4 +210,13 @@ class GuitarChordModel: ObservableObject {
         return chord.scaleArray[trueIndex]
         
     }
+    
+    func clearAll() {
+        for fretIndex in 0..<Constants.fretCount {
+            for stringIndex in 0..<Constants.stringCount {
+                fretPressed[fretIndex][stringIndex] = false
+                stringsEnabled[stringIndex] = true
+            }
+        }
+    }
 }

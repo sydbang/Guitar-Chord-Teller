@@ -19,6 +19,9 @@ struct GuitarFretView: View {
                 GeometryReader { geo in
                     
                     VStack {
+                        GuitarSettingView()
+                            .padding()
+                        
                         GuitarNoteView()
                             .padding(.horizontal, geo.size.width/14)
 
