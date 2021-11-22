@@ -26,7 +26,7 @@
 /* Begin PBXFileReference section */
 		3B5502E12704F4E3007A0A56 /* GuitarChord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuitarChord.swift; sourceTree = "<group>"; };
 		3B5502E52704F570007A0A56 /* GuitarChordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuitarChordModel.swift; sourceTree = "<group>"; };
-		3B57CC0826EFD81B008859E7 /* GuitarChordTeller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuitarChordTeller.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B57CC0826EFD81B008859E7 /* ChordTeller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChordTeller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B57CC0B26EFD81B008859E7 /* GuitarChordTellerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuitarChordTellerApp.swift; sourceTree = "<group>"; };
 		3B57CC0D26EFD81B008859E7 /* GuitarFretView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuitarFretView.swift; sourceTree = "<group>"; };
 		3B57CC0F26EFD81F008859E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -64,7 +64,7 @@
 		3B57CC0926EFD81B008859E7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3B57CC0826EFD81B008859E7 /* GuitarChordTeller.app */,
+				3B57CC0826EFD81B008859E7 /* ChordTeller.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -158,9 +158,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3B57CC0726EFD81B008859E7 /* GuitarChordTeller */ = {
+		3B57CC0726EFD81B008859E7 /* ChordTeller */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3B57CC1726EFD81F008859E7 /* Build configuration list for PBXNativeTarget "GuitarChordTeller" */;
+			buildConfigurationList = 3B57CC1726EFD81F008859E7 /* Build configuration list for PBXNativeTarget "ChordTeller" */;
 			buildPhases = (
 				3B57CC0426EFD81B008859E7 /* Sources */,
 				3B57CC0526EFD81B008859E7 /* Frameworks */,
@@ -170,9 +170,9 @@
 			);
 			dependencies = (
 			);
-			name = GuitarChordTeller;
+			name = ChordTeller;
 			productName = GuitarChordTeller;
-			productReference = 3B57CC0826EFD81B008859E7 /* GuitarChordTeller.app */;
+			productReference = 3B57CC0826EFD81B008859E7 /* ChordTeller.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -189,7 +189,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3B57CC0326EFD81B008859E7 /* Build configuration list for PBXProject "GuitarChordTeller" */;
+			buildConfigurationList = 3B57CC0326EFD81B008859E7 /* Build configuration list for PBXProject "ChordTeller" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -202,7 +202,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3B57CC0726EFD81B008859E7 /* GuitarChordTeller */,
+				3B57CC0726EFD81B008859E7 /* ChordTeller */,
 			);
 		};
 /* End PBXProject section */
@@ -405,7 +405,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3B57CC0326EFD81B008859E7 /* Build configuration list for PBXProject "GuitarChordTeller" */ = {
+		3B57CC0326EFD81B008859E7 /* Build configuration list for PBXProject "ChordTeller" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3B57CC1526EFD81F008859E7 /* Debug */,
@@ -414,7 +414,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3B57CC1726EFD81F008859E7 /* Build configuration list for PBXNativeTarget "GuitarChordTeller" */ = {
+		3B57CC1726EFD81F008859E7 /* Build configuration list for PBXNativeTarget "ChordTeller" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3B57CC1826EFD81F008859E7 /* Debug */,

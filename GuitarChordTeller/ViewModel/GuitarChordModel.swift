@@ -174,7 +174,7 @@ class GuitarChordModel: ObservableObject {
         let baseInfo = grabBase()
         let chordInfo = setChord()
         
-        if chordInfo.contains("Base") {
+        if chordInfo.contains("Base") && !chordInfo.contains("undefined"){
             displayChord = chordInfo + " " + baseInfo
         } else {
             displayChord = baseInfo + " " + chordInfo
