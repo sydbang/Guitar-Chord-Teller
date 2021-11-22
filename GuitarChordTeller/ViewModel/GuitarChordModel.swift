@@ -216,6 +216,7 @@ class GuitarChordModel: ObservableObject {
             for stringIndex in 0..<Constants.stringCount {
                 fretPressed[fretIndex][stringIndex] = false
                 stringsEnabled[stringIndex] = true
+                pressedFretIndex[stringIndex] = 0
             }
         }
     }
