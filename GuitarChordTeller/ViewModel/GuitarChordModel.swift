@@ -225,6 +225,14 @@ class GuitarChordModel: ObservableObject {
                 fretPressed[fretIndex][stringIndex] = false
                 stringsEnabled[stringIndex] = true
                 pressedFretIndex[stringIndex] = 0
+                chordArray = []
+                chordArray.append(chord.scaleArray[4])
+                chordArray.append(chord.scaleArray[11])
+                chordArray.append(chord.scaleArray[7])
+                chordArray.append(chord.scaleArray[2])
+                chordArray.append(chord.scaleArray[9])
+                chordArray.append(chord.scaleArray[4])
+                
             }
         }
     }
