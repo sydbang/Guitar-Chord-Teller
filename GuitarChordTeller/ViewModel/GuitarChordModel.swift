@@ -159,6 +159,8 @@ class GuitarChordModel: ObservableObject {
             return "Minor 7 flat 5"
         } else if [0, 3, 6, 9].allSatisfy(fromBaseIndex.contains) {
             return "Diminished 7"
+        } else if [0, 2, 4, 7].allSatisfy(fromBaseIndex.contains) {
+            return "Suspended 2"
         } else if [0, 4, 7].allSatisfy(fromBaseIndex.contains) {
             return "Major"
         } else if [0, 5, 7].allSatisfy(fromBaseIndex.contains) {
