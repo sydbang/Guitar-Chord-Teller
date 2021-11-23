@@ -17,10 +17,10 @@ struct HowToView: View {
             TabView (selection: $tabSelection) {
                 // First tab
                 VStack {
-                    Text("Welcome to GCT!")
+                    Text("Welcome to ChordTeller!")
                         .bold()
                         .font(.title)
-                    Text("Guitar Chord Teller will help you find chords by simply putting your fingers on to the app's guitar fret!")
+                    Text("Chord Teller will help you find 6 string guitar chords!")
                 }
                 .multilineTextAlignment(.center)
                 .padding()
