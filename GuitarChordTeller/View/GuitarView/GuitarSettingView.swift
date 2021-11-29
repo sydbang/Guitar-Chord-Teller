@@ -17,7 +17,7 @@ struct GuitarSettingView: View {
             Button {
                 userChord.clearAll()
             } label: {
-                Text("clear all")
+                Text("Clear All")
             }
             Spacer()
             

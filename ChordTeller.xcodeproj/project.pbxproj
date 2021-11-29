@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,9 @@
 		3B57CC0E26EFD81B008859E7 /* GuitarFretView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B57CC0D26EFD81B008859E7 /* GuitarFretView.swift */; };
 		3B57CC1026EFD81F008859E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B57CC0F26EFD81F008859E7 /* Assets.xcassets */; };
 		3B57CC1326EFD81F008859E7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B57CC1226EFD81F008859E7 /* Preview Assets.xcassets */; };
+		3B6A0D7F275551E600CF7259 /* BannerAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6A0D7E275551E600CF7259 /* BannerAd.swift */; };
+		3B6A0D8E2755798200CF7259 /* BannerAdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6A0D8D2755798200CF7259 /* BannerAdVC.swift */; };
+		3B6A0D9127557C8100CF7259 /* SwiftUIBannerAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6A0D9027557C8100CF7259 /* SwiftUIBannerAd.swift */; };
 		3BE1C7A8274C2B6300F9572A /* GuitarSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE1C7A7274C2B6300F9572A /* GuitarSettingView.swift */; };
 		3BE384542739A47B0004CD97 /* HowToView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE384532739A47B0004CD97 /* HowToView.swift */; };
 		3BE384582739BD240004CD97 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE384572739BD240004CD97 /* LaunchView.swift */; };
@@ -22,9 +25,11 @@
 		3BE384A327400FFE0004CD97 /* GuitarNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE384A227400FFE0004CD97 /* GuitarNoteView.swift */; };
 		3BE384AF27471E7E0004CD97 /* GuitarLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE384AE27471E7D0004CD97 /* GuitarLineView.swift */; };
 		3BE384B22747279E0004CD97 /* GuitarDotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE384B12747279D0004CD97 /* GuitarDotView.swift */; };
+		8F54C9C23BD5A7D9AEE11358 /* Pods_ChordTeller.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BDA2DB117F62BC2055E20C3 /* Pods_ChordTeller.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		104F58896BD731C8F20EE953 /* Pods-ChordTeller.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChordTeller.debug.xcconfig"; path = "Target Support Files/Pods-ChordTeller/Pods-ChordTeller.debug.xcconfig"; sourceTree = "<group>"; };
 		3B5502E12704F4E3007A0A56 /* GuitarChord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuitarChord.swift; sourceTree = "<group>"; };
 		3B5502E52704F570007A0A56 /* GuitarChordModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuitarChordModel.swift; sourceTree = "<group>"; };
 		3B57CC0826EFD81B008859E7 /* ChordTeller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChordTeller.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -33,6 +38,9 @@
 		3B57CC0F26EFD81F008859E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B57CC1226EFD81F008859E7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3B57CC1426EFD81F008859E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B6A0D7E275551E600CF7259 /* BannerAd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAd.swift; sourceTree = "<group>"; };
+		3B6A0D8D2755798200CF7259 /* BannerAdVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdVC.swift; sourceTree = "<group>"; };
+		3B6A0D9027557C8100CF7259 /* SwiftUIBannerAd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIBannerAd.swift; sourceTree = "<group>"; };
 		3BE1C7A7274C2B6300F9572A /* GuitarSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuitarSettingView.swift; sourceTree = "<group>"; };
 		3BE384532739A47B0004CD97 /* HowToView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToView.swift; sourceTree = "<group>"; };
 		3BE384572739BD240004CD97 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
@@ -42,6 +50,8 @@
 		3BE384A227400FFE0004CD97 /* GuitarNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuitarNoteView.swift; sourceTree = "<group>"; };
 		3BE384AE27471E7D0004CD97 /* GuitarLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuitarLineView.swift; sourceTree = "<group>"; };
 		3BE384B12747279D0004CD97 /* GuitarDotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuitarDotView.swift; sourceTree = "<group>"; };
+		6BDA2DB117F62BC2055E20C3 /* Pods_ChordTeller.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChordTeller.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A92837FA4F79D8329D4FD361 /* Pods-ChordTeller.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChordTeller.release.xcconfig"; path = "Target Support Files/Pods-ChordTeller/Pods-ChordTeller.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,17 +59,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F54C9C23BD5A7D9AEE11358 /* Pods_ChordTeller.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2863FF237397708019B6A355 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6BDA2DB117F62BC2055E20C3 /* Pods_ChordTeller.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3B57CBFF26EFD81B008859E7 = {
 			isa = PBXGroup;
 			children = (
 				3B57CC0A26EFD81B008859E7 /* GuitarChordTeller */,
 				3B57CC0926EFD81B008859E7 /* Products */,
+				B44D64A63911FEF22F6D8B85 /* Pods */,
+				2863FF237397708019B6A355 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +123,8 @@
 				3BE38490273C5E170004CD97 /* ChordTellerView.swift */,
 				3BE384A0273C6AF70004CD97 /* GuitarView */,
 				3BE384522739A35B0004CD97 /* Onboarding */,
+				3B6A0D7E275551E600CF7259 /* BannerAd.swift */,
+				3B6A0D8D2755798200CF7259 /* BannerAdVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -154,8 +177,18 @@
 				3BE384AE27471E7D0004CD97 /* GuitarLineView.swift */,
 				3BE384B12747279D0004CD97 /* GuitarDotView.swift */,
 				3BE1C7A7274C2B6300F9572A /* GuitarSettingView.swift */,
+				3B6A0D9027557C8100CF7259 /* SwiftUIBannerAd.swift */,
 			);
 			path = GuitarView;
+			sourceTree = "<group>";
+		};
+		B44D64A63911FEF22F6D8B85 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				104F58896BD731C8F20EE953 /* Pods-ChordTeller.debug.xcconfig */,
+				A92837FA4F79D8329D4FD361 /* Pods-ChordTeller.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,9 +198,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3B57CC1726EFD81F008859E7 /* Build configuration list for PBXNativeTarget "ChordTeller" */;
 			buildPhases = (
+				18E9C36C53B752921B488A26 /* [CP] Check Pods Manifest.lock */,
 				3B57CC0426EFD81B008859E7 /* Sources */,
 				3B57CC0526EFD81B008859E7 /* Frameworks */,
 				3B57CC0626EFD81B008859E7 /* Resources */,
+				AC2BD3A359129CFC2969F399 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -222,6 +257,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		18E9C36C53B752921B488A26 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChordTeller-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC2BD3A359129CFC2969F399 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChordTeller/Pods-ChordTeller-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChordTeller/Pods-ChordTeller-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChordTeller/Pods-ChordTeller-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3B57CC0426EFD81B008859E7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -233,8 +310,11 @@
 				3BE384582739BD240004CD97 /* LaunchView.swift in Sources */,
 				3B57CC0E26EFD81B008859E7 /* GuitarFretView.swift in Sources */,
 				3BE384AF27471E7E0004CD97 /* GuitarLineView.swift in Sources */,
+				3B6A0D9127557C8100CF7259 /* SwiftUIBannerAd.swift in Sources */,
 				3BE38491273C5E170004CD97 /* ChordTellerView.swift in Sources */,
 				3BE384A327400FFE0004CD97 /* GuitarNoteView.swift in Sources */,
+				3B6A0D7F275551E600CF7259 /* BannerAd.swift in Sources */,
+				3B6A0D8E2755798200CF7259 /* BannerAdVC.swift in Sources */,
 				3B5502E62704F570007A0A56 /* GuitarChordModel.swift in Sources */,
 				3BE38495273C652F0004CD97 /* GuitarFretButton.swift in Sources */,
 				3BE3845C2739C0E20004CD97 /* Constants.swift in Sources */,
@@ -364,10 +444,12 @@
 		};
 		3B57CC1826EFD81F008859E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 104F58896BD731C8F20EE953 /* Pods-ChordTeller.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"GuitarChordTeller/Preview Content\"";
 				DEVELOPMENT_TEAM = 2EE5SGL7U2;
 				ENABLE_PREVIEWS = YES;
@@ -386,10 +468,12 @@
 		};
 		3B57CC1926EFD81F008859E7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A92837FA4F79D8329D4FD361 /* Pods-ChordTeller.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"GuitarChordTeller/Preview Content\"";
 				DEVELOPMENT_TEAM = 2EE5SGL7U2;
 				ENABLE_PREVIEWS = YES;

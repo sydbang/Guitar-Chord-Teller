@@ -1,0 +1,6 @@
+framework module Pods_ChordTeller {
+  umbrella header "Pods-ChordTeller-umbrella.h"
+
+  export *
+  module * { export * }
+}

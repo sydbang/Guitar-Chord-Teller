@@ -14,6 +14,7 @@ struct LaunchView: View {
     var body: some View {
         if model.firstTimeUser == true {
             HowToView()
+                
         } else {
             GuitarFretView()
         }
