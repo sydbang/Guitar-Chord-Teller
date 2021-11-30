@@ -10,6 +10,8 @@ import SwiftUI
 struct HowToView: View {
     
     @EnvironmentObject var model: GuitarChordModel
+    @EnvironmentObject var userSettings: UserSettings
+    
     @State private var tabSelection = 0
     
     var body: some View {
@@ -47,7 +49,8 @@ struct HowToView: View {
                 if tabSelection == 0 {
                     tabSelection = 1
                 } else {
-                    model.firstTimeUser = false
+                    //UserDefaults.standard.set(false, forKey: "isFirstTimeUser")
+                    userSettings.firstTimeUser = false
                 }
             } label: {
                 ZStack {

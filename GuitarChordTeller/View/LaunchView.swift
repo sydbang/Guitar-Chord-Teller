@@ -10,14 +10,16 @@ import SwiftUI
 struct LaunchView: View {
     
     @EnvironmentObject var model: GuitarChordModel
+    @EnvironmentObject var userSettings: UserSettings
     
     var body: some View {
-        if model.firstTimeUser == true {
+        if userSettings.firstTimeUser == true {
             HowToView()
                 
         } else {
             GuitarFretView()
         }
+        
     }
 }
 

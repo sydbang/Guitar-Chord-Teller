@@ -9,7 +9,7 @@ import Foundation
 
 class GuitarChordModel: ObservableObject {
     
-    @Published var firstTimeUser = true
+    @Published var showHowToView = true
     @Published var displayChord = ""
     
     @Published var stringsEnabled = [true,true,true,true,true,true]
