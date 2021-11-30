@@ -11,7 +11,6 @@ import GoogleMobileAds
 
 @main
 struct GuitarChordTellerApp: App {
-    var guitarChordModel = GuitarChordModel()
     
     //Use init() in place of ApplicationDidFinishLaunchWithOptions in App Delegate
     init() {
@@ -31,7 +30,8 @@ struct GuitarChordTellerApp: App {
     var body: some Scene {
         WindowGroup {
             LaunchView()
-                .environmentObject(guitarChordModel)
+                .environmentObject(GuitarChordModel())
+                .environmentObject(UserSettings())
         }
     }
 }
