@@ -141,7 +141,18 @@ class GuitarChordModel: ObservableObject {
     }
     
     func checkChord(fromBaseIndex: [Int]) -> String {
-        if [0, 4, 7, 10, 2, 5].allSatisfy(fromBaseIndex.contains) {
+        if [0, 3, 7, 10, 5].allSatisfy(fromBaseIndex.contains) {
+            return "Minor 11"
+        } else
+        if [0, 4, 7, 9, 2].allSatisfy(fromBaseIndex.contains) {
+            return "Major 6/9"
+        } else if [0, 4, 7, 11, 6].allSatisfy(fromBaseIndex.contains) {
+            return "Major 7 #11"
+        } else if [0, 4, 7, 11, 9].allSatisfy(fromBaseIndex.contains) {
+            return "Major 13"
+        } else if [0, 4, 7, 11, 5].allSatisfy(fromBaseIndex.contains) {
+            return "Major 11"
+        } else if [0, 4, 7, 10, 2, 5].allSatisfy(fromBaseIndex.contains) {
             return "Dominant 13"
         } else if [0, 4, 7, 10, 2, 3].allSatisfy(fromBaseIndex.contains) {
             return "Dominant 11"
