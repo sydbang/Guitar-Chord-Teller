@@ -17,6 +17,7 @@
 		3B6A0D8E2755798200CF7259 /* BannerAdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6A0D8D2755798200CF7259 /* BannerAdVC.swift */; };
 		3B6A0D9127557C8100CF7259 /* SwiftUIBannerAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6A0D9027557C8100CF7259 /* SwiftUIBannerAd.swift */; };
 		3B6A0D9527559CBF00CF7259 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6A0D9427559CBF00CF7259 /* UserSettings.swift */; };
+		3B6A0D9D2759396100CF7259 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6A0D9C2759396100CF7259 /* SettingsView.swift */; };
 		3BE1C7A8274C2B6300F9572A /* GuitarSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE1C7A7274C2B6300F9572A /* GuitarSettingView.swift */; };
 		3BE384542739A47B0004CD97 /* HowToView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE384532739A47B0004CD97 /* HowToView.swift */; };
 		3BE384582739BD240004CD97 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE384572739BD240004CD97 /* LaunchView.swift */; };
@@ -43,6 +44,7 @@
 		3B6A0D8D2755798200CF7259 /* BannerAdVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdVC.swift; sourceTree = "<group>"; };
 		3B6A0D9027557C8100CF7259 /* SwiftUIBannerAd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIBannerAd.swift; sourceTree = "<group>"; };
 		3B6A0D9427559CBF00CF7259 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		3B6A0D9C2759396100CF7259 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		3BE1C7A7274C2B6300F9572A /* GuitarSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuitarSettingView.swift; sourceTree = "<group>"; };
 		3BE384532739A47B0004CD97 /* HowToView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToView.swift; sourceTree = "<group>"; };
 		3BE384572739BD240004CD97 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				3BE384A0273C6AF70004CD97 /* GuitarView */,
 				3BE384522739A35B0004CD97 /* Onboarding */,
 				3B6A0D9327559C3800CF7259 /* Ads */,
+				3B6A0D9C2759396100CF7259 /* SettingsView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				3BE384B22747279E0004CD97 /* GuitarDotView.swift in Sources */,
 				3BE1C7A8274C2B6300F9572A /* GuitarSettingView.swift in Sources */,
 				3B5502E22704F4E3007A0A56 /* GuitarChord.swift in Sources */,
+				3B6A0D9D2759396100CF7259 /* SettingsView.swift in Sources */,
 				3BE384582739BD240004CD97 /* LaunchView.swift in Sources */,
 				3B57CC0E26EFD81B008859E7 /* GuitarFretView.swift in Sources */,
 				3BE384AF27471E7E0004CD97 /* GuitarLineView.swift in Sources */,

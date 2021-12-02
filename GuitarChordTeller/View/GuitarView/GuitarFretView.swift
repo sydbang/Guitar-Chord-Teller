@@ -20,7 +20,13 @@ struct GuitarFretView: View {
                     
                     VStack {
                         GuitarSettingView()
-                            .padding()
+                            .padding(.horizontal)
+                        
+                        // Display the chord
+                        Text(userChord.displayChord)
+                            .font(.system(size: 40))
+                            .lineLimit(2)
+                            .padding(10)
                         
                         GuitarNoteView()
                             .padding(.horizontal, geo.size.width/14)
@@ -45,6 +51,7 @@ struct GuitarFretView: View {
                                                 string: j,
                                                 toggleFunction: {userChord.fretPressed[i][j].toggle()}
                                             )
+                                            
                                             Spacer()
                                                 
                                         }
@@ -62,23 +69,27 @@ struct GuitarFretView: View {
                     .padding(.top, 10)
                 }
                 
-                NavigationLink(
-                    destination: ChordTellerView()
-                        .onAppear(perform: userChord.getChord),
-                    label: {
-                        ZStack {
-                            Rectangle()
-                                .foregroundColor(Constants.blue)
-                                .frame(height: 48)
-                                .cornerRadius(10)
-                            Text("Find Chord!")
-                                .bold()
-                                .padding()
-                                .accentColor(.white)
-                        }
-                        .padding()
-                    }
-                )
+//                NavigationLink(
+//                    destination: ChordTellerView()
+//                        .onAppear(perform: userChord.getChord),
+//                    label: {
+//                        ZStack {
+//                            Rectangle()
+//                                .foregroundColor(Constants.blue)
+//                                .frame(height: 48)
+//                                .cornerRadius(10)
+//                            Text("Find Chord!")
+//                                .bold()
+//                                .padding()
+//                                .accentColor(.white)
+//                        }
+//                        .padding()
+//                    }
+//                )
+                
+                SwiftUIBannerAd(adPosition: .bottom, adUnitId: "ca-app-pub-5621465422465010/8515892106")
+                    .frame(height:50)
+                //for testing ads "ca-app-pub-3940256099942544/2934735716")
             }
             .navigationBarHidden(true)
             

@@ -21,18 +21,25 @@ struct GuitarSettingView: View {
             }
             Spacer()
             
-            //TODo leftie
-            Toggle(isOn: $userChord.leftHanded, label: {
-                Text("Left Handed View")
-                    .frame(maxWidth: .infinity, alignment: .trailing)
-                    .foregroundColor(Constants.blue)
-            })
-            .toggleStyle(SwitchToggleStyle(tint: Constants.blue))
+//            //TODo leftie
+//            Toggle(isOn: $userChord.leftHanded, label: {
+//                Text("Left Handed View")
+//                    .frame(maxWidth: .infinity, alignment: .trailing)
+//                    .foregroundColor(Constants.blue)
+//            })
+//            .toggleStyle(SwitchToggleStyle(tint: Constants.blue))
+            
+            NavigationLink(
+                destination: SettingsView(),
+                label: {
+                    HStack {
+                        Image(systemName: "gear")
+                        Text("Settings")
+                    }
+                }
+            )
             
         }
-        .onChange(of: userChord.leftHanded, perform: { value in
-            userChord.updateStringIndex()
-        })
         
     }
 }

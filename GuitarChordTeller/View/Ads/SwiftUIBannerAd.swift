@@ -9,8 +9,8 @@ import SwiftUI
 import GoogleMobileAds
 
 struct SwiftUIBannerAd: View {
-    @State var height: CGFloat = 50 //Height of ad
-    @State var width: CGFloat = 400 //Width of ad
+    @State var height: CGFloat = 0 //Height of ad
+    @State var width: CGFloat = 0 //Width of ad
     var adPosition: AdPosition
     let adUnitId: String
     

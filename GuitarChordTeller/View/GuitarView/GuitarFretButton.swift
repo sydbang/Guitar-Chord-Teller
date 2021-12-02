@@ -33,6 +33,7 @@ struct GuitarFretButton: View {
                 userChord.chordArray[string] = userChord.stringArray[string]
                 //chordArray[stringIndex] = stringArray[stringIndex]!
             }
+            userChord.getChord()
         } label: {
             Image(systemName: pressed == false ? "circle" : "circle.fill")
             
