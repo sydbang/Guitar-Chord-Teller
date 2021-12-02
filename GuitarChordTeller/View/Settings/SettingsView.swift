@@ -11,7 +11,11 @@ struct SettingsView: View {
     @EnvironmentObject var userChord:GuitarChordModel
     @EnvironmentObject var userDefault: UserSettings
     
+    @State var showTuner = false
+    
     var body: some View {
+        
+        
         VStack {
             //TODo leftie
             Toggle(isOn: $userDefault.leftHanded, label: {
@@ -21,6 +25,30 @@ struct SettingsView: View {
             .toggleStyle(SwitchToggleStyle(tint: Constants.blue))
             .padding(20)
             
+            HStack {
+                Text("Tuning")
+                Spacer()
+                Button(action: {
+                    showTuner.toggle()
+                }) {
+                    
+                    ForEach (0..<userChord.stringArray.count) { index in
+                        Text(userChord.stringArray[index] ?? "")
+                    }
+                }
+                .sheet(isPresented: $showTuner) {
+                    SettingTunerView()
+                        .onDisappear(perform: {
+                            userChord.clearAll()
+                            userChord.setStringArray()
+                            userChord.setChordArrray()
+                            userChord.getChord()
+                        })
+                }
+                
+            }
+            .padding(.horizontal, 20)
+            
             Spacer()
             
             SwiftUIBannerAd(adPosition: .bottom, adUnitId: "ca-app-pub-5621465422465010/8515892106")
@@ -28,6 +56,8 @@ struct SettingsView: View {
             //for testing ads "ca-app-pub-3940256099942544/2934735716")
         }
         .navigationBarTitle("Settings",displayMode: .inline)
+        
+        
     }
 }
 

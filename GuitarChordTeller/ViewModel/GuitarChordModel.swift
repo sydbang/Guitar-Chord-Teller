@@ -23,29 +23,36 @@ class GuitarChordModel: ObservableObject {
     
     @Published var pressedFretIndex: [Int] = [0,0,0,0,0,0]
     
-    
+    @Published var stringScaleIndex: [Int] {
+        didSet {
+            UserDefaults.standard.set(stringScaleIndex, forKey: "stringScaleIndex")
+            
+        }
+    }
 
     
     init() {
         
-        chordArray.append(chord.scaleArray[4])
-        chordArray.append(chord.scaleArray[11])
-        chordArray.append(chord.scaleArray[7])
-        chordArray.append(chord.scaleArray[2])
-        chordArray.append(chord.scaleArray[9])
-        chordArray.append(chord.scaleArray[4])
+        self.stringScaleIndex = UserDefaults.standard.object(forKey: "stringScaleIndex") as? [Int] ?? [4, 11, 7, 2, 9, 4]
         
-        stringArray.append(chord.scaleArray[4])
-        stringArray.append(chord.scaleArray[11])
-        stringArray.append(chord.scaleArray[7])
-        stringArray.append(chord.scaleArray[2])
-        stringArray.append(chord.scaleArray[9])
-        stringArray.append(chord.scaleArray[4])
-        
-
+        setChordArrray()
+        setStringArray()
     }
    
+    func setChordArrray() {
+        chordArray = []
+        for index in stringScaleIndex {
+            chordArray.append(chord.scaleArray[index])
+        }
+    }
     
+    func setStringArray() {
+        stringArray = []
+        for index in stringScaleIndex {
+            stringArray.append(chord.scaleArray[index])
+        }
+        
+    }
     func grabBase() -> String {
         
         for index in ((0..<stringsEnabled.count).reversed()) {
@@ -239,14 +246,7 @@ class GuitarChordModel: ObservableObject {
                 fretPressed[fretIndex][stringIndex] = false
                 stringsEnabled[stringIndex] = true
                 pressedFretIndex[stringIndex] = 0
-                chordArray = []
-                chordArray.append(chord.scaleArray[4])
-                chordArray.append(chord.scaleArray[11])
-                chordArray.append(chord.scaleArray[7])
-                chordArray.append(chord.scaleArray[2])
-                chordArray.append(chord.scaleArray[9])
-                chordArray.append(chord.scaleArray[4])
-                
+                setChordArrray()
             }
         }
         getChord()

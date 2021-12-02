@@ -9,6 +9,7 @@ import Foundation
 import Combine
 
 class UserSettings: ObservableObject {
+    
     @Published var firstTimeUser: Bool {
         didSet {
             UserDefaults.standard.set(firstTimeUser, forKey: "isFirstTimeUser")
