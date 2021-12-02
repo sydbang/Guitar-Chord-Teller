@@ -249,6 +249,7 @@ class GuitarChordModel: ObservableObject {
                 
             }
         }
+        getChord()
     }
     
     

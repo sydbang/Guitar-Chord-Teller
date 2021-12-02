@@ -16,6 +16,7 @@ struct GuitarSettingView: View {
         HStack {
             Button {
                 userChord.clearAll()
+                
             } label: {
                 Text("Clear All")
             }
