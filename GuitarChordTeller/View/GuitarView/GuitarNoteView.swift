@@ -9,14 +9,13 @@ import SwiftUI
 
 struct GuitarNoteView: View {
 
-  
-    
     @EnvironmentObject var userChord:GuitarChordModel
+    @EnvironmentObject var userDefaults:UserSettings
     
     var body: some View {
         HStack {
             
-            ForEach (userChord.stringsIndex, id: \.self) { index in
+            ForEach (userDefaults.stringsIndex, id: \.self) { index in
                 Spacer()
                 Button  {
                     userChord.stringsEnabled[index].toggle()
@@ -27,7 +26,7 @@ struct GuitarNoteView: View {
                             userChord.pressedFretIndex[index] = 0
                         }
                     }
-
+                    userChord.getChord()
                     
                 } label: {
                     if userChord.stringsEnabled[index] == true {

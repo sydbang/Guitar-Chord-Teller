@@ -11,6 +11,7 @@ import SwiftUI
 struct GuitarFretView: View {
     
     @EnvironmentObject var userChord:GuitarChordModel
+    @EnvironmentObject var userDefaults:UserSettings
    
     var body: some View {
         
@@ -24,7 +25,7 @@ struct GuitarFretView: View {
                         
                         // Display the chord
                         Text(userChord.displayChord)
-                            .font(.system(size: 40))
+                            .font(.system(size: 38))
                             .lineLimit(2)
                             .padding(10)
                         
@@ -42,7 +43,7 @@ struct GuitarFretView: View {
                                         .padding(.horizontal, geo.size.width/7)
                                     HStack (alignment: .center){
                                         
-                                        ForEach(userChord.stringsIndex, id: \.self) { j in
+                                        ForEach(userDefaults.stringsIndex, id: \.self) { j in
                                             Spacer()
                                             GuitarFretButton(
                                                 pressed: userChord.fretPressed[i][j] ,
@@ -65,6 +66,7 @@ struct GuitarFretView: View {
   
                             }
                         }
+                        .onAppear(perform: userDefaults.updateStringIndex)
                     }
                     .padding(.top, 10)
                 }

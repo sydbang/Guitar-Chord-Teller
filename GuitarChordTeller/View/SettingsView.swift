@@ -9,11 +9,12 @@ import SwiftUI
 
 struct SettingsView: View {
     @EnvironmentObject var userChord:GuitarChordModel
+    @EnvironmentObject var userDefault: UserSettings
     
     var body: some View {
         VStack {
             //TODo leftie
-            Toggle(isOn: $userChord.leftHanded, label: {
+            Toggle(isOn: $userDefault.leftHanded, label: {
                 Text("Left Handed View")
                     .foregroundColor(Constants.blue)
             })

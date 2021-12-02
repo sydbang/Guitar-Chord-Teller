@@ -23,9 +23,7 @@ class GuitarChordModel: ObservableObject {
     
     @Published var pressedFretIndex: [Int] = [0,0,0,0,0,0]
     
-    @Published var leftHanded = false
     
-    @Published var stringsIndex: [Int] = []
 
     
     init() {
@@ -44,7 +42,6 @@ class GuitarChordModel: ObservableObject {
         stringArray.append(chord.scaleArray[9])
         stringArray.append(chord.scaleArray[4])
         
-        updateStringIndex()
 
     }
    
@@ -158,7 +155,7 @@ class GuitarChordModel: ObservableObject {
             return "Dominant 11"
         } else if [0, 4, 7, 10, 2].allSatisfy(fromBaseIndex.contains) {
             return "Dominant 9"
-        } else if [0, 4, 7, 11, 2].allSatisfy(fromBaseIndex.contains) {
+        } else if [0, 4, 7, 2].allSatisfy(fromBaseIndex.contains) {
             return "Major 9"
         } else if [0, 4, 7, 11].allSatisfy(fromBaseIndex.contains) {
             return "Major 7"
@@ -170,6 +167,8 @@ class GuitarChordModel: ObservableObject {
             return "Minor 7 flat 5"
         } else if [0, 3, 6, 9].allSatisfy(fromBaseIndex.contains) {
             return "Diminished 7"
+        } else if [0, 4, 7, 5].allSatisfy(fromBaseIndex.contains) {
+            return "Major add 4"
         } else if [0, 4, 7, 9].allSatisfy(fromBaseIndex.contains) {
             return "Major add 6"
         } else if [0, 2, 4, 7].allSatisfy(fromBaseIndex.contains) {
@@ -184,6 +183,8 @@ class GuitarChordModel: ObservableObject {
             return "Minor"
         } else if [0, 4, 8].allSatisfy(fromBaseIndex.contains) {
             return "Augmented"
+        } else if [0, 4, 6].allSatisfy(fromBaseIndex.contains) {
+            return "Major flat 5"
         } else if [0, 2, 7].allSatisfy(fromBaseIndex.contains) {
             return "Suspended 2"
         } else {
@@ -250,7 +251,5 @@ class GuitarChordModel: ObservableObject {
         }
     }
     
-    func updateStringIndex() {
-        stringsIndex = (leftHanded ? [0, 1, 2, 3, 4, 5]:[5, 4, 3, 2, 1, 0])
-    }
+    
 }
