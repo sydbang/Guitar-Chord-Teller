@@ -96,7 +96,6 @@ class GuitarChordModel: ObservableObject {
         
         for z in 0..<noteIndex.count {
             fromBaseIndex = getIndexArrayFromBase(noteIndex: noteIndex, baseIndex: baseIndex)
-            print (fromBaseIndex)
             stringToReturn = checkChord(fromBaseIndex: fromBaseIndex)
             if !stringToReturn.contains("Base / ") {
                 if z != 0 {
@@ -145,10 +144,15 @@ class GuitarChordModel: ObservableObject {
     }
     
     func checkChord(fromBaseIndex: [Int]) -> String {
-        if [0, 3, 7, 10, 5].allSatisfy(fromBaseIndex.contains) {
+        if [0, 3, 7, 10, 9].allSatisfy(fromBaseIndex.contains) {
+            return "Minor 13"
+        } else if [0, 3, 7, 10, 5].allSatisfy(fromBaseIndex.contains) {
             return "Minor 11"
-        } else
-        if [0, 4, 7, 9, 2].allSatisfy(fromBaseIndex.contains) {
+        } else if [0, 3, 7, 10, 2].allSatisfy(fromBaseIndex.contains) {
+            return "Minor 9"
+        } else if [0, 3, 7, 9, 2].allSatisfy(fromBaseIndex.contains) {
+            return "Minor 6/9"
+        } else if [0, 4, 7, 9, 2].allSatisfy(fromBaseIndex.contains) {
             return "Major 6/9"
         } else if [0, 4, 7, 11, 6].allSatisfy(fromBaseIndex.contains) {
             return "Major 7 #11"
@@ -162,12 +166,18 @@ class GuitarChordModel: ObservableObject {
             return "Dominant 11"
         } else if [0, 4, 7, 10, 2].allSatisfy(fromBaseIndex.contains) {
             return "Dominant 9"
+        } else if [0, 3, 7, 2].allSatisfy(fromBaseIndex.contains) {
+            return "Minor add 9"
         } else if [0, 4, 7, 2].allSatisfy(fromBaseIndex.contains) {
             return "Major 9"
         } else if [0, 4, 7, 11].allSatisfy(fromBaseIndex.contains) {
             return "Major 7"
         } else if [0, 4, 7, 10].allSatisfy(fromBaseIndex.contains) {
             return "Dominant 7"
+        } else if [0, 3, 5, 7].allSatisfy(fromBaseIndex.contains) {
+            return "Minor add 4"
+        } else if [0, 3, 7, 9].allSatisfy(fromBaseIndex.contains) {
+            return "Minor 6"
         } else if [0, 3, 7, 10].allSatisfy(fromBaseIndex.contains) {
             return "Minor 7"
         } else if [0, 3, 6, 10].allSatisfy(fromBaseIndex.contains) {
