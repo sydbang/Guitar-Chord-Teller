@@ -20,7 +20,6 @@ struct SettingsView: View {
             //TODo leftie
             Toggle(isOn: $userDefault.leftHanded, label: {
                 Text("Left Handed View")
-                    .foregroundColor(Constants.blue)
             })
             .toggleStyle(SwitchToggleStyle(tint: Constants.blue))
             .padding(20)
@@ -32,7 +31,7 @@ struct SettingsView: View {
                     showTuner.toggle()
                 }) {
                     
-                    ForEach (0..<userChord.stringArray.count) { index in
+                    ForEach ((0..<userChord.stringArray.count).reversed(), id: \.self) { index in
                         Text(userChord.stringArray[index] ?? "")
                     }
                 }
