@@ -34,7 +34,7 @@ struct HowToView: View {
                     Text("You simply place your fingers on to the correct area by scrolling and tapping on the guitar fret.")
                         .bold()
                         .font(.title)
-                    Text("We will tell you what chord you are holding when you press the find chord button!")
+                    Text("We will tell you what chord you are holding!")
                 }
                 .multilineTextAlignment(.center)
                 .padding()
