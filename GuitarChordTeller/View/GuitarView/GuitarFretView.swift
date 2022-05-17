@@ -12,7 +12,14 @@ struct GuitarFretView: View {
     
     @EnvironmentObject var userChord:GuitarChordModel
     @EnvironmentObject var userDefaults:UserSettings
-   
+    
+    var tuning: String {
+        if userChord.stringScaleIndex == [4, 11, 7, 2, 9, 4] {
+            return "Standard tuning"
+        } else {
+            return "Not standard tuning"
+        }
+    }
     var body: some View {
         
         NavigationView {
@@ -22,6 +29,9 @@ struct GuitarFretView: View {
                     VStack {
                         GuitarFretTop()
                             .padding(.horizontal)
+                        
+                        Text(tuning)
+                            .font(.system(size: 13))
                         
                         // Display the chord
                         Text(userChord.displayChord)
