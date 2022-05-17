@@ -7,9 +7,10 @@
 
 import SwiftUI
 
-struct GuitarSettingView: View {
+struct GuitarFretTop: View {
     
     @EnvironmentObject var userChord:GuitarChordModel
+    @Environment(\.managedObjectContext) private var viewContext
     
     
     var body: some View {
@@ -47,6 +48,6 @@ struct GuitarSettingView: View {
 
 struct GuitarSettingView_Previews: PreviewProvider {
     static var previews: some View {
-        GuitarSettingView()
+        GuitarFretTop()
     }
 }

@@ -17,7 +17,7 @@ struct LaunchView: View {
             HowToView()
                 
         } else {
-            GuitarFretView()
+            TopTabView()
         }
         
     }

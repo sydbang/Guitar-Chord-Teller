@@ -20,7 +20,7 @@ struct GuitarFretView: View {
                 GeometryReader { geo in
                     
                     VStack {
-                        GuitarSettingView()
+                        GuitarFretTop()
                             .padding(.horizontal)
                         
                         // Display the chord

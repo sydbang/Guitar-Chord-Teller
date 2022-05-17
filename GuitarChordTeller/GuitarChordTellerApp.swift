@@ -12,6 +12,8 @@ import GoogleMobileAds
 @main
 struct GuitarChordTellerApp: App {
     
+    let persistenceController = PersistenceController.shared
+    
     //Use init() in place of ApplicationDidFinishLaunchWithOptions in App Delegate
     init() {
         if ATTrackingManager.trackingAuthorizationStatus == .notDetermined {
@@ -32,6 +34,7 @@ struct GuitarChordTellerApp: App {
             LaunchView()
                 .environmentObject(GuitarChordModel())
                 .environmentObject(UserSettings())
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }

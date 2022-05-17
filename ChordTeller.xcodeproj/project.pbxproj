@@ -13,13 +13,19 @@
 		3B57CC0E26EFD81B008859E7 /* GuitarFretView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B57CC0D26EFD81B008859E7 /* GuitarFretView.swift */; };
 		3B57CC1026EFD81F008859E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B57CC0F26EFD81F008859E7 /* Assets.xcassets */; };
 		3B57CC1326EFD81F008859E7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B57CC1226EFD81F008859E7 /* Preview Assets.xcassets */; };
+		3B5A0081283417F00008E1CE /* Chord.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3B5A007F283417F00008E1CE /* Chord.xcdatamodeld */; };
+		3B5A0085283418270008E1CE /* Chord+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5A0084283418270008E1CE /* Chord+CoreDataProperties.swift */; };
+		3B5A0086283418270008E1CE /* Chord+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5A0083283418270008E1CE /* Chord+CoreDataClass.swift */; };
+		3B5A008928341BB00008E1CE /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5A008828341BB00008E1CE /* Persistence.swift */; };
+		3B5A008E28341EA80008E1CE /* RecentChordListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5A008D28341EA80008E1CE /* RecentChordListView.swift */; };
+		3B5A009228341FD40008E1CE /* TopTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5A009128341FD40008E1CE /* TopTabView.swift */; };
 		3B6A0D7F275551E600CF7259 /* BannerAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6A0D7E275551E600CF7259 /* BannerAd.swift */; };
 		3B6A0D8E2755798200CF7259 /* BannerAdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6A0D8D2755798200CF7259 /* BannerAdVC.swift */; };
 		3B6A0D9127557C8100CF7259 /* SwiftUIBannerAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6A0D9027557C8100CF7259 /* SwiftUIBannerAd.swift */; };
 		3B6A0D9527559CBF00CF7259 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6A0D9427559CBF00CF7259 /* UserSettings.swift */; };
 		3B6A0D9D2759396100CF7259 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6A0D9C2759396100CF7259 /* SettingsView.swift */; };
 		3B6A0DA627595E2400CF7259 /* SettingTunerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B6A0DA527595E2400CF7259 /* SettingTunerView.swift */; };
-		3BE1C7A8274C2B6300F9572A /* GuitarSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE1C7A7274C2B6300F9572A /* GuitarSettingView.swift */; };
+		3BE1C7A8274C2B6300F9572A /* GuitarFretTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE1C7A7274C2B6300F9572A /* GuitarFretTop.swift */; };
 		3BE384542739A47B0004CD97 /* HowToView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE384532739A47B0004CD97 /* HowToView.swift */; };
 		3BE384582739BD240004CD97 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE384572739BD240004CD97 /* LaunchView.swift */; };
 		3BE3845C2739C0E20004CD97 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE3845B2739C0E20004CD97 /* Constants.swift */; };
@@ -40,13 +46,19 @@
 		3B57CC0F26EFD81F008859E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B57CC1226EFD81F008859E7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3B57CC1426EFD81F008859E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B5A0080283417F00008E1CE /* Chord.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Chord.xcdatamodel; sourceTree = "<group>"; };
+		3B5A0083283418270008E1CE /* Chord+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Chord+CoreDataClass.swift"; path = "/Users/mine/repos/GuitarChordTeller/GuitarChordTeller/Data/Chord+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		3B5A0084283418270008E1CE /* Chord+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Chord+CoreDataProperties.swift"; path = "/Users/mine/repos/GuitarChordTeller/GuitarChordTeller/Data/Chord+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		3B5A008828341BB00008E1CE /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		3B5A008D28341EA80008E1CE /* RecentChordListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentChordListView.swift; sourceTree = "<group>"; };
+		3B5A009128341FD40008E1CE /* TopTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTabView.swift; sourceTree = "<group>"; };
 		3B6A0D7E275551E600CF7259 /* BannerAd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAd.swift; sourceTree = "<group>"; };
 		3B6A0D8D2755798200CF7259 /* BannerAdVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdVC.swift; sourceTree = "<group>"; };
 		3B6A0D9027557C8100CF7259 /* SwiftUIBannerAd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIBannerAd.swift; sourceTree = "<group>"; };
 		3B6A0D9427559CBF00CF7259 /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
 		3B6A0D9C2759396100CF7259 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		3B6A0DA527595E2400CF7259 /* SettingTunerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTunerView.swift; sourceTree = "<group>"; };
-		3BE1C7A7274C2B6300F9572A /* GuitarSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuitarSettingView.swift; sourceTree = "<group>"; };
+		3BE1C7A7274C2B6300F9572A /* GuitarFretTop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuitarFretTop.swift; sourceTree = "<group>"; };
 		3BE384532739A47B0004CD97 /* HowToView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToView.swift; sourceTree = "<group>"; };
 		3BE384572739BD240004CD97 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		3BE3845B2739C0E20004CD97 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -120,6 +132,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		3B5A008C28341E8C0008E1CE /* History */ = {
+			isa = PBXGroup;
+			children = (
+				3B5A008D28341EA80008E1CE /* RecentChordListView.swift */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
 		3B6A0D9327559C3800CF7259 /* Ads */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,8 +162,10 @@
 		3BA4560F26FCD75A00591072 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3B6A0DA427595E0A00CF7259 /* Settings */,
 				3BE384572739BD240004CD97 /* LaunchView.swift */,
+				3B5A009128341FD40008E1CE /* TopTabView.swift */,
+				3B5A008C28341E8C0008E1CE /* History */,
+				3B6A0DA427595E0A00CF7259 /* Settings */,
 				3BE384A0273C6AF70004CD97 /* GuitarView */,
 				3BE384522739A35B0004CD97 /* Onboarding */,
 				3B6A0D9327559C3800CF7259 /* Ads */,
@@ -172,6 +194,10 @@
 			isa = PBXGroup;
 			children = (
 				3BE3845B2739C0E20004CD97 /* Constants.swift */,
+				3B5A0083283418270008E1CE /* Chord+CoreDataClass.swift */,
+				3B5A0084283418270008E1CE /* Chord+CoreDataProperties.swift */,
+				3B5A007F283417F00008E1CE /* Chord.xcdatamodeld */,
+				3B5A008828341BB00008E1CE /* Persistence.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -199,7 +225,7 @@
 				3BE384A227400FFE0004CD97 /* GuitarNoteView.swift */,
 				3BE384AE27471E7D0004CD97 /* GuitarLineView.swift */,
 				3BE384B12747279D0004CD97 /* GuitarDotView.swift */,
-				3BE1C7A7274C2B6300F9572A /* GuitarSettingView.swift */,
+				3BE1C7A7274C2B6300F9572A /* GuitarFretTop.swift */,
 			);
 			path = GuitarView;
 			sourceTree = "<group>";
@@ -327,20 +353,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BE384B22747279E0004CD97 /* GuitarDotView.swift in Sources */,
-				3BE1C7A8274C2B6300F9572A /* GuitarSettingView.swift in Sources */,
+				3B5A008E28341EA80008E1CE /* RecentChordListView.swift in Sources */,
+				3BE1C7A8274C2B6300F9572A /* GuitarFretTop.swift in Sources */,
 				3B5502E22704F4E3007A0A56 /* GuitarChord.swift in Sources */,
+				3B5A0086283418270008E1CE /* Chord+CoreDataClass.swift in Sources */,
 				3B6A0D9D2759396100CF7259 /* SettingsView.swift in Sources */,
 				3BE384582739BD240004CD97 /* LaunchView.swift in Sources */,
 				3B57CC0E26EFD81B008859E7 /* GuitarFretView.swift in Sources */,
+				3B5A009228341FD40008E1CE /* TopTabView.swift in Sources */,
 				3BE384AF27471E7E0004CD97 /* GuitarLineView.swift in Sources */,
 				3B6A0D9127557C8100CF7259 /* SwiftUIBannerAd.swift in Sources */,
 				3BE384A327400FFE0004CD97 /* GuitarNoteView.swift in Sources */,
 				3B6A0D7F275551E600CF7259 /* BannerAd.swift in Sources */,
+				3B5A008928341BB00008E1CE /* Persistence.swift in Sources */,
 				3B6A0D8E2755798200CF7259 /* BannerAdVC.swift in Sources */,
+				3B5A0081283417F00008E1CE /* Chord.xcdatamodeld in Sources */,
 				3B5502E62704F570007A0A56 /* GuitarChordModel.swift in Sources */,
 				3B6A0DA627595E2400CF7259 /* SettingTunerView.swift in Sources */,
 				3BE38495273C652F0004CD97 /* GuitarFretButton.swift in Sources */,
 				3BE3845C2739C0E20004CD97 /* Constants.swift in Sources */,
+				3B5A0085283418270008E1CE /* Chord+CoreDataProperties.swift in Sources */,
 				3B57CC0C26EFD81B008859E7 /* GuitarChordTellerApp.swift in Sources */,
 				3BE384542739A47B0004CD97 /* HowToView.swift in Sources */,
 				3B6A0D9527559CBF00CF7259 /* UserSettings.swift in Sources */,
@@ -538,6 +570,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3B5A007F283417F00008E1CE /* Chord.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3B5A0080283417F00008E1CE /* Chord.xcdatamodel */,
+			);
+			currentVersion = 3B5A0080283417F00008E1CE /* Chord.xcdatamodel */;
+			path = Chord.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3B57CC0026EFD81B008859E7 /* Project object */;
 }
