@@ -43,7 +43,7 @@ struct GuitarFretTop: View {
     private func addChord() {
         let chord = Chord(context: viewContext)
         chord.name = userChord.displayChord
-        
+        chord.date = NSDate() as Date
         do {
             try viewContext.save()
         } catch {

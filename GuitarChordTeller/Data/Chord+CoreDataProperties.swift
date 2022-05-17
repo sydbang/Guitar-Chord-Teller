@@ -17,5 +17,6 @@ extension Chord {
     }
 
     @NSManaged public var name: String
+    @NSManaged public var date: Date?
 
 }

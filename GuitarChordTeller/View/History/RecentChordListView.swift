@@ -11,7 +11,7 @@ import CoreData
 struct RecentChordListView: View {
     @Environment(\.managedObjectContext) private var viewContext
     
-    @FetchRequest(sortDescriptors: []) var chords: FetchedResults<Chord>
+    @FetchRequest(sortDescriptors: [NSSortDescriptor(key: "date", ascending: true)]) var chords: FetchedResults<Chord>
     
     var body: some View {
         VStack {
@@ -20,7 +20,12 @@ struct RecentChordListView: View {
             List {
                 ForEach(chords, id: \.self) { chord in
                     Text(chord.name)
+                        .onTapGesture {
+                            viewContext.delete(chord)
+                            try! viewContext.save()
+                        }
                 }
+                
             }
             
             Spacer()
