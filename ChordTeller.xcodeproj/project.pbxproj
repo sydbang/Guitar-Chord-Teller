@@ -220,12 +220,12 @@
 		3BE384A0273C6AF70004CD97 /* GuitarView */ = {
 			isa = PBXGroup;
 			children = (
+				3BE1C7A7274C2B6300F9572A /* GuitarFretTop.swift */,
 				3B57CC0D26EFD81B008859E7 /* GuitarFretView.swift */,
 				3BE38494273C652F0004CD97 /* GuitarFretButton.swift */,
 				3BE384A227400FFE0004CD97 /* GuitarNoteView.swift */,
 				3BE384AE27471E7D0004CD97 /* GuitarLineView.swift */,
 				3BE384B12747279D0004CD97 /* GuitarDotView.swift */,
-				3BE1C7A7274C2B6300F9572A /* GuitarFretTop.swift */,
 			);
 			path = GuitarView;
 			sourceTree = "<group>";

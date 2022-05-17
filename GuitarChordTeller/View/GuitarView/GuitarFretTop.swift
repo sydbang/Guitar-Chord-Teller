@@ -30,19 +30,25 @@ struct GuitarFretTop: View {
 //                    .foregroundColor(Constants.blue)
 //            })
 //            .toggleStyle(SwitchToggleStyle(tint: Constants.blue))
-            
-            NavigationLink(
-                destination: SettingsView(),
-                label: {
+            if userChord.displayChord != "" {
+                Button(action: addChord) {
                     HStack {
-                        Image(systemName: "gear")
-                        Text("Settings")
+                        Text("Save")
+                        Image(systemName: "square.and.arrow.down")
                     }
                 }
-            )
-            
+            }
         }
+    }
+    private func addChord() {
+        let chord = Chord(context: viewContext)
+        chord.name = userChord.displayChord
         
+        do {
+            try viewContext.save()
+        } catch {
+            // Error with saving
+        }
     }
 }
 

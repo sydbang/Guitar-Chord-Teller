@@ -17,6 +17,10 @@ struct SettingsView: View {
         
         
         VStack {
+            
+            Text("Settings")
+                .font(.title)
+            
             //TODo leftie
             Toggle(isOn: $userDefault.leftHanded, label: {
                 Text("Left Handed View")
