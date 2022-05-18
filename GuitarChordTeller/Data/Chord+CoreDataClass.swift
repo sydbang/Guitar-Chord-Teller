@@ -2,7 +2,7 @@
 //  Chord+CoreDataClass.swift
 //  
 //
-//  Created by Sunghee Bang on 2022-05-17.
+//  Created by Sunghee Bang on 2022-05-18.
 //
 //
 

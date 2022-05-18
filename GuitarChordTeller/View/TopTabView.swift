@@ -11,7 +11,7 @@ struct TopTabView: View {
     var body: some View {
         TabView {
             
-            GuitarFretView()
+            GuitarHomeView()
                 .tabItem {
                     VStack {
                         Image(systemName: "star.fill")

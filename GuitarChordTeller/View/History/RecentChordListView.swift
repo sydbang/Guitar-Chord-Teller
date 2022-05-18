@@ -22,7 +22,7 @@ struct RecentChordListView: View {
                     
                     HStack {
                         Text(chord.name)
-                            
+
                         Spacer()
                             
                         Button(action: {

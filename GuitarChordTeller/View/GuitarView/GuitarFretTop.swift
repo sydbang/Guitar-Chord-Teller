@@ -17,19 +17,11 @@ struct GuitarFretTop: View {
         HStack {
             Button {
                 userChord.clearAll()
-                
             } label: {
                 Text("Clear All")
             }
             Spacer()
             
-//            //TODo leftie
-//            Toggle(isOn: $userChord.leftHanded, label: {
-//                Text("Left Handed View")
-//                    .frame(maxWidth: .infinity, alignment: .trailing)
-//                    .foregroundColor(Constants.blue)
-//            })
-//            .toggleStyle(SwitchToggleStyle(tint: Constants.blue))
             if userChord.displayChord != "" {
                 Button(action: addChord) {
                     HStack {
@@ -44,6 +36,10 @@ struct GuitarFretTop: View {
         let chord = Chord(context: viewContext)
         chord.name = userChord.displayChord
         chord.date = NSDate() as Date
+        chord.stringScaleIndex = userChord.stringScaleIndex
+        chord.stringsEnabled = userChord.stringsEnabled as NSObject
+        chord.fretPressedIndex = userChord.pressedFretIndex
+        
         do {
             try viewContext.save()
         } catch {

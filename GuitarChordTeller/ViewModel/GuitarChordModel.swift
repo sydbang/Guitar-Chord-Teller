@@ -12,7 +12,7 @@ class GuitarChordModel: ObservableObject {
     @Published var showHowToView = true
     @Published var displayChord = ""
     
-    @Published var stringsEnabled = [true,true,true,true,true,true]
+    @Published var stringsEnabled: [Bool] = [true,true,true,true,true,true]
     
     @Published var fretPressed = Array(repeating: Array(repeating: false, count: Constants.stringCount), count: Constants.fretCount)
     
@@ -262,5 +262,12 @@ class GuitarChordModel: ObservableObject {
         getChord()
     }
     
+    func getFretMatrix(pressedFretIndex: [Int]) {
+        clearAll()
+        
+        for stringIndex in 0..<(pressedFretIndex.count + 1) {
+            fretPressed[pressedFretIndex[stringIndex] - 1][stringIndex] = true
+        }
+    }
     
 }

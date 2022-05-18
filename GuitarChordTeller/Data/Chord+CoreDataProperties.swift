@@ -2,7 +2,7 @@
 //  Chord+CoreDataProperties.swift
 //  
 //
-//  Created by Sunghee Bang on 2022-05-17.
+//  Created by Sunghee Bang on 2022-05-18.
 //
 //
 
@@ -16,7 +16,10 @@ extension Chord {
         return NSFetchRequest<Chord>(entityName: "Chord")
     }
 
-    @NSManaged public var name: String
     @NSManaged public var date: Date?
+    @NSManaged public var name: String
+    @NSManaged public var stringScaleIndex: [Int]?
+    @NSManaged public var fretPressedIndex: [Int]?
+    @NSManaged public var stringsEnabled: NSObject?
 
 }
