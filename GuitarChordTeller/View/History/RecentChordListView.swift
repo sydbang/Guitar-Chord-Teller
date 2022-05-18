@@ -19,11 +19,19 @@ struct RecentChordListView: View {
                 .font(.title)
             List {
                 ForEach(chords, id: \.self) { chord in
-                    Text(chord.name)
-                        .onTapGesture {
+                    
+                    HStack {
+                        Text(chord.name)
+                            
+                        Spacer()
+                            
+                        Button(action: {
                             viewContext.delete(chord)
                             try! viewContext.save()
+                        }) {
+                            Image(systemName: "xmark.circle")
                         }
+                    }
                 }
                 
             }
