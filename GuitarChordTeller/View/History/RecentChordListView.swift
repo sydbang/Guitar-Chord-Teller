@@ -48,7 +48,7 @@ struct RecentChordListView: View {
                         }
                     }
                 }
-                
+                .listStyle(PlainListStyle())
                 Spacer()
                 
                 SwiftUIBannerAd(adPosition: .bottom, adUnitId: "ca-app-pub-5621465422465010/8515892106")

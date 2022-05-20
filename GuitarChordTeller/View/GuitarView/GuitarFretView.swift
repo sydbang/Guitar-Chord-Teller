@@ -82,7 +82,7 @@ struct GuitarFretView: View {
                 .frame(height:50)
             //for testing ads "ca-app-pub-3940256099942544/2934735716")
         }
-        
+        .navigationBarTitleDisplayMode (.inline)
     }
 }
 
