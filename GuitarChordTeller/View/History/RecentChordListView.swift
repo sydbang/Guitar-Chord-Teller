@@ -25,19 +25,22 @@ struct RecentChordListView: View {
                         HStack {
                             NavigationLink (destination:
                                                 GuitarFretView()
+                                                
                                                 .onAppear() {
-                                                    DispatchQueue.main.async {
-                                                        userChord.getFretMatrix(pressedFretIndex: chord.fretPressedIndex)
-                                                        userChord.stringScaleIndex = chord.stringScaleIndex
-                                                        userChord.setStringArray()
-                                                        userChord.displayChord = chord.name
-                                                        userChord.stringsEnabled = chord.stringsEnabled as! [Bool]
-                                                        
-                                                    }
+                                                    userChord.stringScaleIndex = chord.stringScaleIndex
+                                                    
+                                                    userChord.pressedFretIndex = chord.fretPressedIndex
+                                                    
+                                                    userChord.getFretMatrix(pressedFretIndex:  chord.fretPressedIndex)
+                                                    userChord.displayChord = chord.name
+                                                    userChord.stringsEnabled = chord.stringsEnabled as! [Bool]
+                                                    
                                                 },
                                             label: {
                                                 Text(chord.name)
+                                                
                                             })
+                            
                             Spacer()
                             
                             Image(systemName: "xmark.circle")

@@ -16,7 +16,7 @@ class GuitarChordModel: ObservableObject {
     
     @Published var fretPressed = Array(repeating: Array(repeating: false, count: Constants.stringCount), count: Constants.fretCount)
     
-    @Published var stringArray: [String?] = []
+    @Published var stringArray: [String?] = [] // when nothing is pressed
     @Published var chordArray: [String?] = []
     
     var chord = GuitarChord()
@@ -257,6 +257,7 @@ class GuitarChordModel: ObservableObject {
                 stringsEnabled[stringIndex] = true
                 pressedFretIndex[stringIndex] = 0
                 setChordArrray()
+                setStringArray()
             }
         }
         displayChord = ""
@@ -270,6 +271,7 @@ class GuitarChordModel: ObservableObject {
                 continue
             } else {
                 fretPressed[pressedFretIndex[stringIndex] - 1][stringIndex] = true
+                newButtonPressed(fretNum: pressedFretIndex[stringIndex]-1, stringIndex: stringIndex)
             }
         }
     }
