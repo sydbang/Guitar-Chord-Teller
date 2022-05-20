@@ -259,14 +259,18 @@ class GuitarChordModel: ObservableObject {
                 setChordArrray()
             }
         }
-        getChord()
+        displayChord = ""
     }
     
     func getFretMatrix(pressedFretIndex: [Int]) {
         clearAll()
         
-        for stringIndex in 0..<(pressedFretIndex.count + 1) {
-            fretPressed[pressedFretIndex[stringIndex] - 1][stringIndex] = true
+        for stringIndex in 0..<(pressedFretIndex.count) {
+            if pressedFretIndex[stringIndex] == 0 {
+                continue
+            } else {
+                fretPressed[pressedFretIndex[stringIndex] - 1][stringIndex] = true
+            }
         }
     }
     

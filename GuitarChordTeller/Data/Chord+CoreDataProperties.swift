@@ -18,8 +18,8 @@ extension Chord {
 
     @NSManaged public var date: Date?
     @NSManaged public var name: String
-    @NSManaged public var stringScaleIndex: [Int]?
-    @NSManaged public var fretPressedIndex: [Int]?
-    @NSManaged public var stringsEnabled: NSObject?
+    @NSManaged public var stringScaleIndex: [Int]
+    @NSManaged public var fretPressedIndex: [Int]
+    @NSManaged public var stringsEnabled: NSObject
 
 }

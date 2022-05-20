@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct TopTabView: View {
+    @EnvironmentObject var userChord:GuitarChordModel
+    
     var body: some View {
         TabView {
             
@@ -18,6 +20,7 @@ struct TopTabView: View {
                         Text("Fret")
                     }
                 }
+                .onAppear(perform: userChord.clearAll)
             
             RecentChordListView()
                 .tabItem {
