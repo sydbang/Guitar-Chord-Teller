@@ -55,6 +55,7 @@ struct SettingsView: View {
             Spacer()
             
             SwiftUIBannerAd(adPosition: .bottom, adUnitId: "ca-app-pub-5621465422465010/8515892106")
+                .frame(height: 50)
             //for testing ads "ca-app-pub-3940256099942544/2934735716")
         }
         
