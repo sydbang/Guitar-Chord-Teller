@@ -256,10 +256,11 @@ class GuitarChordModel: ObservableObject {
                 fretPressed[fretIndex][stringIndex] = false
                 stringsEnabled[stringIndex] = true
                 pressedFretIndex[stringIndex] = 0
-                setChordArrray()
-                setStringArray()
+                
             }
         }
+        setChordArrray()
+        setStringArray()
         displayChord = ""
     }
     
