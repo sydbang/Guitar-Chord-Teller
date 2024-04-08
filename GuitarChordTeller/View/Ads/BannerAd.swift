@@ -9,7 +9,7 @@ import SwiftUI
 import GoogleMobileAds
 import UIKit
 
-final class BannerAd: UIViewControllerRepresentable {
+struct BannerAd: UIViewControllerRepresentable {
     let adUnitId: String
     
     init(adUnitId: String) {

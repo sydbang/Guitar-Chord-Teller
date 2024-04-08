@@ -13,13 +13,11 @@ class UserSettings: ObservableObject {
     @Published var firstTimeUser: Bool {
         didSet {
             UserDefaults.standard.set(firstTimeUser, forKey: "isFirstTimeUser")
-            
         }
     }
     @Published var leftHanded: Bool {
         didSet {
             UserDefaults.standard.set(leftHanded, forKey: "isleftHanded")
-            
         }
     }
     @Published var stringsIndex: [Int] = []
