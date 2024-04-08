@@ -29,6 +29,7 @@ struct TopTabView: View {
                         Text("History")
                     }
                 }
+            
             SettingsView()
                 .tabItem {
                     VStack {
