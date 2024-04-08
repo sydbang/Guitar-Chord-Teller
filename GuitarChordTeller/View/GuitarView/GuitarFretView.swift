@@ -43,7 +43,7 @@ struct GuitarFretView: View {
                         .padding()
                     
                     ScrollView {
-                        ForEach(0 ..< Constants.fretCount) { i in
+                        ForEach(0 ..< Constants.fretCount, id: \.self) { i in
                             Spacer()
                             ZStack {
                                 GuitarLineView()
