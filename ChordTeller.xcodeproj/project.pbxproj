@@ -260,6 +260,8 @@
 			dependencies = (
 			);
 			name = ChordTeller;
+			packageProductDependencies = (
+			);
 			productName = GuitarChordTeller;
 			productReference = 3B57CC0826EFD81B008859E7 /* ChordTeller.app */;
 			productType = "com.apple.product-type.application";
@@ -287,6 +289,9 @@
 				Base,
 			);
 			mainGroup = 3B57CBFF26EFD81B008859E7;
+			packageReferences = (
+				6F98AB852BC494BF008E0782 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
+			);
 			productRefGroup = 3B57CC0926EFD81B008859E7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -576,6 +581,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6F98AB852BC494BF008E0782 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCVersionGroup section */
 		3B5A007F283417F00008E1CE /* Chord.xcdatamodeld */ = {
