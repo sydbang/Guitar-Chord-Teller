@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -52,8 +52,8 @@
 		3B5A008D28341EA80008E1CE /* RecentChordListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentChordListView.swift; sourceTree = "<group>"; };
 		3B5A009128341FD40008E1CE /* TopTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopTabView.swift; sourceTree = "<group>"; };
 		3B5A00AD283574800008E1CE /* GuitarHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuitarHomeView.swift; sourceTree = "<group>"; };
-		3B5A00B1283581CD0008E1CE /* Chord+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Chord+CoreDataClass.swift"; path = "/Users/mine/repos/GuitarChordTeller/GuitarChordTeller/Data/Chord+CoreDataClass.swift"; sourceTree = "<absolute>"; };
-		3B5A00B2283581CD0008E1CE /* Chord+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Chord+CoreDataProperties.swift"; path = "/Users/mine/repos/GuitarChordTeller/GuitarChordTeller/Data/Chord+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		3B5A00B1283581CD0008E1CE /* Chord+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chord+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3B5A00B2283581CD0008E1CE /* Chord+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chord+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		3B6A0D7E275551E600CF7259 /* BannerAd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAd.swift; sourceTree = "<group>"; };
 		3B6A0D8D2755798200CF7259 /* BannerAdVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdVC.swift; sourceTree = "<group>"; };
 		3B6A0D9027557C8100CF7259 /* SwiftUIBannerAd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIBannerAd.swift; sourceTree = "<group>"; };
@@ -514,7 +514,8 @@
 				DEVELOPMENT_TEAM = 2EE5SGL7U2;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = GuitarChordTeller/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -539,7 +540,8 @@
 				DEVELOPMENT_TEAM = 2EE5SGL7U2;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = GuitarChordTeller/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
