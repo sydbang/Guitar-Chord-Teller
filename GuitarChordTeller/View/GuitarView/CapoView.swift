@@ -15,7 +15,20 @@ struct CapoView: View {
     var body: some View {
         if fretNum == userChord.capoOnFret {
             HStack {
-                Image(systemName: "line.3.horizontal")
+                VStack {
+                    Image(systemName: "arrowtriangle.up.circle.fill")
+                        .onTapGesture {
+                            if fretNum > 0 {
+                                userChord.capoOnFret = fretNum - 1
+                            }
+                        }
+                    Image(systemName: "arrowtriangle.down.circle.fill")
+                        .onTapGesture {
+                            if fretNum < Constants.fretCount {
+                                userChord.capoOnFret = fretNum + 1
+                            }
+                        }
+                }
                 Rectangle()
                     .frame(height: 60)
             }
