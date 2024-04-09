@@ -10,6 +10,7 @@ import SwiftUI
 struct CapoView: View {
     
     @EnvironmentObject var userChord:GuitarChordModel
+    @EnvironmentObject var userDefaults:UserSettings
     
     @State var fretNum: Int
     var body: some View {
@@ -31,6 +32,13 @@ struct CapoView: View {
                 }
                 Rectangle()
                     .frame(height: 60)
+                    .onAppear() {
+                        for j in userDefaults.stringsIndex {
+                            userChord.fretPressed[fretNum][j] = true
+                            userChord.newButtonPressed(fretNum: fretNum, stringIndex: j)
+                        }
+                        userChord.getChord()
+                    }
             }
             .padding(.horizontal, 10)
         }

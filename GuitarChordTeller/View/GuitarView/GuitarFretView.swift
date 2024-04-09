@@ -39,6 +39,7 @@ struct GuitarFretView: View {
                         Spacer()
                         Button {
                             if userChord.capoOnFret != nil {
+                                userChord.clearAll()
                                 userChord.capoOnFret = nil
                             } else {
                                 userChord.capoOnFret = 1
@@ -79,11 +80,8 @@ struct GuitarFretView: View {
                                             string: j,
                                             toggleFunction: {userChord.fretPressed[i][j].toggle()}
                                         )
-                                        
                                         Spacer()
-                                        
                                     }
-                                    
                                 }
                                 .padding(.vertical, CGFloat(Constants.fretCount - i)*2 + 1)
                                 .padding(.horizontal, geo.size.width/14)
@@ -91,7 +89,6 @@ struct GuitarFretView: View {
                                 GuitarDotView(fretNum: i)
                                 CapoView(fretNum: i)
                             }
-                            
                         }
                     }
                     .onAppear(perform: userDefaults.updateStringIndex)
