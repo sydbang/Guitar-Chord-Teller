@@ -20,15 +20,34 @@ struct GuitarFretView: View {
             return "Not standard tuning"
         }
     }
+    
+    var capoText: String {
+        if userChord.capoOnFret != nil {
+            return "Remove Capo"
+        } else {
+            return "Use Capo"
+        }
+    }
     var body: some View {
         
         VStack {
             GeometryReader { geo in
-                
                 VStack {
-                    
-                    Text(tuning)
-                        .font(.system(size: 13))
+                    HStack{
+                        Text(tuning)
+                            .font(.system(size: 13))
+                        Spacer()
+                        Button {
+                            if userChord.capoOnFret != nil {
+                                userChord.capoOnFret = nil
+                            } else {
+                                userChord.capoOnFret = 1
+                            }
+                        } label: {
+                            Text(capoText)
+                        }
+                    }
+                    .padding(.horizontal, geo.size.width/14)
                     
                     // Display the chord
                     Text(userChord.displayChord)
@@ -46,6 +65,7 @@ struct GuitarFretView: View {
                         ForEach(0 ..< Constants.fretCount, id: \.self) { i in
                             Spacer()
                             ZStack {
+                                
                                 GuitarLineView()
                                     .padding(.horizontal, geo.size.width/7)
                                 HStack (alignment: .center){
@@ -69,6 +89,7 @@ struct GuitarFretView: View {
                                 .padding(.horizontal, geo.size.width/14)
                                 
                                 GuitarDotView(fretNum: i)
+                                CapoView(fretNum: i)
                             }
                             
                         }

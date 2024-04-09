@@ -11,6 +11,7 @@ class GuitarChordModel: ObservableObject {
     
     @Published var showHowToView = true
     @Published var displayChord = ""
+    @Published var capoOnFret: Int? = nil
     
     @Published var stringsEnabled: [Bool] = [true,true,true,true,true,true]
     

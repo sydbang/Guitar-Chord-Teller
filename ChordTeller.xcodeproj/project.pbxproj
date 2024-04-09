@@ -34,6 +34,7 @@
 		3BE384A327400FFE0004CD97 /* GuitarNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE384A227400FFE0004CD97 /* GuitarNoteView.swift */; };
 		3BE384AF27471E7E0004CD97 /* GuitarLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE384AE27471E7D0004CD97 /* GuitarLineView.swift */; };
 		3BE384B22747279E0004CD97 /* GuitarDotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE384B12747279D0004CD97 /* GuitarDotView.swift */; };
+		6F98AB8A2BC5D3E2008E0782 /* CapoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F98AB892BC5D3E2008E0782 /* CapoView.swift */; };
 		8F54C9C23BD5A7D9AEE11358 /* Pods_ChordTeller.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BDA2DB117F62BC2055E20C3 /* Pods_ChordTeller.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,7 @@
 		3BE384AE27471E7D0004CD97 /* GuitarLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuitarLineView.swift; sourceTree = "<group>"; };
 		3BE384B12747279D0004CD97 /* GuitarDotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuitarDotView.swift; sourceTree = "<group>"; };
 		6BDA2DB117F62BC2055E20C3 /* Pods_ChordTeller.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChordTeller.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F98AB892BC5D3E2008E0782 /* CapoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapoView.swift; sourceTree = "<group>"; };
 		A92837FA4F79D8329D4FD361 /* Pods-ChordTeller.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChordTeller.release.xcconfig"; path = "Target Support Files/Pods-ChordTeller/Pods-ChordTeller.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -229,6 +231,7 @@
 				3BE384A227400FFE0004CD97 /* GuitarNoteView.swift */,
 				3BE384AE27471E7D0004CD97 /* GuitarLineView.swift */,
 				3BE384B12747279D0004CD97 /* GuitarDotView.swift */,
+				6F98AB892BC5D3E2008E0782 /* CapoView.swift */,
 			);
 			path = GuitarView;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 				3B5A008E28341EA80008E1CE /* RecentChordListView.swift in Sources */,
 				3BE1C7A8274C2B6300F9572A /* GuitarFretTop.swift in Sources */,
 				3B5502E22704F4E3007A0A56 /* GuitarChord.swift in Sources */,
+				6F98AB8A2BC5D3E2008E0782 /* CapoView.swift in Sources */,
 				3B6A0D9D2759396100CF7259 /* SettingsView.swift in Sources */,
 				3BE384582739BD240004CD97 /* LaunchView.swift in Sources */,
 				3B57CC0E26EFD81B008859E7 /* GuitarFretView.swift in Sources */,

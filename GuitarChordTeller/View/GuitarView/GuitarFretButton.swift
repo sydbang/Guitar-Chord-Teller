@@ -22,8 +22,6 @@ struct GuitarFretButton: View {
     // Do not make a @State variable when you want property to take in something and change data
     
     var body: some View {
-        
-        
         Button {
             //userChord.fretPressed[fret][string].toggle()
             toggleFunction()
