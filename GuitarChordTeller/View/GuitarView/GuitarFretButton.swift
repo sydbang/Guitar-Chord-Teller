@@ -37,7 +37,18 @@ struct GuitarFretButton: View {
             
         }
         .accentColor(Constants.turquoise)
-        .disabled(!enabled)
+        .disabled(checkButtonDisabled())
+    }
+    
+    func checkButtonDisabled() -> Bool {
+        if let capoOnFret = userChord.capoOnFret {
+            if fret < capoOnFret {
+                return true
+            }
+        } else {
+            return !enabled
+        }
+        return false
     }
     
 }
