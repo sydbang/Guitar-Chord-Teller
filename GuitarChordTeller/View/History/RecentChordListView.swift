@@ -34,7 +34,7 @@ struct RecentChordListView: View {
                                                     userChord.getFretMatrix(pressedFretIndex:  chord.fretPressedIndex)
                                                     userChord.displayChord = chord.name
                                                     userChord.stringsEnabled = chord.stringsEnabled as! [Bool]
-                                                    
+                                                    userChord.capoOnFret = chord.capoLocation 
                                                 },
                                             label: {
                                                 Text(chord.name)

@@ -39,11 +39,13 @@ struct GuitarFretTop: View {
         chord.stringScaleIndex = userChord.stringScaleIndex
         chord.stringsEnabled = userChord.stringsEnabled as NSObject
         chord.fretPressedIndex = userChord.pressedFretIndex
-        
+        if let capoLocation = userChord.capoOnFret {
+            chord.capoLocation = capoLocation
+        }
         do {
             try viewContext.save()
         } catch {
-            // Error with saving
+            print("Error when saving chord")
         }
     }
 }
