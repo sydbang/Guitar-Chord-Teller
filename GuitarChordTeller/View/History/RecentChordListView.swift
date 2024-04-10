@@ -19,32 +19,38 @@ struct RecentChordListView: View {
             VStack {
                 Text("History")
                     .font(.title)
-                List {
-                    ForEach(chords, id: \.self) { chord in
-                        
-                        HStack {
-                            NavigationLink (destination: GuitarFretView()
-                                .environmentObject(GuitarChordModel(
-                                    stringScaleIndex: chord.stringScaleIndex,
-                                    pressedFretIndex: chord.fretPressedIndex,
-                                    displayChord: chord.name,
-                                    stringsEnabled: chord.stringsEnabled as! [Bool],
-                                    capoOnFret: chord.capoLocation as! Int? )),
-                                            label: {
-                                Text(chord.name)
-                            })
+                if chords.isEmpty {
+                    Text("No saved chords yet!")
+                        .padding()
+                } else {
+                    List {
+                        ForEach(chords, id: \.self) { chord in
                             
-                            Spacer()
-                            
-                            Image(systemName: "xmark.circle")
-                                .onTapGesture {
-                                    viewContext.delete(chord)
-                                    try! viewContext.save()
-                                }
+                            HStack {
+                                NavigationLink (destination: GuitarFretView()
+                                    .environmentObject(GuitarChordModel(
+                                        stringScaleIndex: chord.stringScaleIndex,
+                                        pressedFretIndex: chord.fretPressedIndex,
+                                        displayChord: chord.name,
+                                        stringsEnabled: chord.stringsEnabled as! [Bool],
+                                        capoOnFret: chord.capoLocation as! Int? )),
+                                                label: {
+                                    Text(chord.name)
+                                })
+                                
+                                Spacer()
+                                
+                                Image(systemName: "xmark.circle")
+                                    .onTapGesture {
+                                        viewContext.delete(chord)
+                                        try! viewContext.save()
+                                    }
+                            }
                         }
                     }
+                    .listStyle(PlainListStyle())
                 }
-                .listStyle(PlainListStyle())
+
                 Spacer()
                 
                 SwiftUIBannerAd(adPosition: .bottom, adUnitId: "ca-app-pub-5621465422465010/8515892106")
