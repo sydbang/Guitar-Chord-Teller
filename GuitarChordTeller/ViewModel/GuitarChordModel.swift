@@ -39,12 +39,18 @@ class GuitarChordModel: ObservableObject {
         setStringArray()
     }
     
-    init(stringScaleIndex: [Int], pressedFretIndex: [Int], displayChord: String, stringsEnabled: [Bool], capoOnFret: Int) {
+    init(stringScaleIndex: [Int], pressedFretIndex: [Int], displayChord: String, stringsEnabled: [Bool], capoOnFret: Int?) {
+        self.stringScaleIndex = UserDefaults.standard.object(forKey: "stringScaleIndex") as? [Int] ?? [4, 11, 7, 2, 9, 4]
+        
+        setChordArrray()
+        setStringArray()
+        
         self.stringScaleIndex = stringScaleIndex
         self.pressedFretIndex = pressedFretIndex
         getFretMatrix(pressedFretIndex: pressedFretIndex)
         self.displayChord = displayChord
         self.stringsEnabled = stringsEnabled
+        print(capoOnFret)
         self.capoOnFret = capoOnFret
     }
    
@@ -108,7 +114,6 @@ class GuitarChordModel: ObservableObject {
             stringToReturn = checkChord(fromBaseIndex: fromBaseIndex)
             if !stringToReturn.contains("Base / ") {
                 if z != 0 {
-                    print(z)
                     let realRoot = chord.scaleArray[noteIndex[z]]
                     stringToReturn = "\(realRoot) \(stringToReturn) / Base"
                     break

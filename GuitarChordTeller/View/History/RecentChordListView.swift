@@ -23,23 +23,16 @@ struct RecentChordListView: View {
                     ForEach(chords, id: \.self) { chord in
                         
                         HStack {
-                            NavigationLink (destination:
-                                                GuitarFretView()
-                                                
-                                                .onAppear() {
-                                                    userChord.stringScaleIndex = chord.stringScaleIndex
-                                                    
-                                                    userChord.pressedFretIndex = chord.fretPressedIndex
-                                                    
-                                                    userChord.getFretMatrix(pressedFretIndex:  chord.fretPressedIndex)
-                                                    userChord.displayChord = chord.name
-                                                    userChord.stringsEnabled = chord.stringsEnabled as! [Bool]
-                                                    userChord.capoOnFret = chord.capoLocation 
-                                                },
+                            NavigationLink (destination: GuitarFretView()
+                                .environmentObject(GuitarChordModel(
+                                    stringScaleIndex: chord.stringScaleIndex,
+                                    pressedFretIndex: chord.fretPressedIndex,
+                                    displayChord: chord.name,
+                                    stringsEnabled: chord.stringsEnabled as! [Bool],
+                                    capoOnFret: chord.capoLocation as! Int? )),
                                             label: {
-                                                Text(chord.name)
-                                                
-                                            })
+                                Text(chord.name)
+                            })
                             
                             Spacer()
                             

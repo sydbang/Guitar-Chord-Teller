@@ -21,6 +21,6 @@ extension Chord {
     @NSManaged public var stringScaleIndex: [Int]
     @NSManaged public var fretPressedIndex: [Int]
     @NSManaged public var stringsEnabled: NSObject
-    @NSManaged public var capoLocation: Int
+    @NSManaged public var capoLocation: NSNumber?
 
 }
