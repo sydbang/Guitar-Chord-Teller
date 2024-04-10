@@ -21,7 +21,6 @@ struct SettingsView: View {
             Text("Settings")
                 .font(.title)
             
-            //TODo leftie
             Toggle(isOn: $userDefault.leftHanded, label: {
                 Text("Left Handed View")
             })
@@ -55,7 +54,7 @@ struct SettingsView: View {
             Spacer()
             
             SwiftUIBannerAd(adPosition: .bottom, adUnitId: "ca-app-pub-5621465422465010/8515892106")
-                .frame(height: 50)
+                .frame(maxHeight: 60)
             //for testing ads "ca-app-pub-3940256099942544/2934735716")
         }
     }

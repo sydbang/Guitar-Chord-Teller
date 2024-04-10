@@ -55,7 +55,7 @@ struct RecentChordListView: View {
                 Spacer()
                 
                 SwiftUIBannerAd(adPosition: .bottom, adUnitId: "ca-app-pub-5621465422465010/8515892106")
-                    .frame(height: 50)
+                    .frame(maxHeight: 60)
             }
             .navigationBarHidden(true)
         }

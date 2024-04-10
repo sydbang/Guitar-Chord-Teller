@@ -42,7 +42,7 @@ struct GuitarFretView: View {
                                 userChord.clearAll()
                                 userChord.capoOnFret = nil
                             } else {
-                                userChord.capoOnFret = 1
+                                userChord.capoOnFret = 0
                             }
                         } label: {
                             Text(capoText)
@@ -97,7 +97,7 @@ struct GuitarFretView: View {
             }
             
             SwiftUIBannerAd(adPosition: .bottom, adUnitId: "ca-app-pub-5621465422465010/8515892106")
-                .frame(height: 50)
+                .frame(maxHeight: 60)
             //for testing ads "ca-app-pub-3940256099942544/2934735716")
         }
         .navigationBarTitleDisplayMode (.inline)
