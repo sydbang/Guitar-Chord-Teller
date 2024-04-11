@@ -40,12 +40,10 @@ class GuitarChordModel: ObservableObject {
     }
     
     init(stringScaleIndex: [Int], pressedFretIndex: [Int], displayChord: String, stringsEnabled: [Bool], capoOnFret: Int?) {
-        self.stringScaleIndex = UserDefaults.standard.object(forKey: "stringScaleIndex") as? [Int] ?? [4, 11, 7, 2, 9, 4]
-        
+        self.stringScaleIndex = stringScaleIndex
         setChordArrray()
         setStringArray()
         
-        self.stringScaleIndex = stringScaleIndex
         self.pressedFretIndex = pressedFretIndex
         getFretMatrix(pressedFretIndex: pressedFretIndex)
         self.displayChord = displayChord
