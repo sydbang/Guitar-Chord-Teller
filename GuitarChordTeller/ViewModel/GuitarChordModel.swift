@@ -39,18 +39,6 @@ class GuitarChordModel: ObservableObject {
         setStringArray()
     }
     
-    init(stringScaleIndex: [Int], pressedFretIndex: [Int], displayChord: String, stringsEnabled: [Bool], capoOnFret: Int?) {
-        self.stringScaleIndex = stringScaleIndex
-        setChordArrray()
-        setStringArray()
-        
-        self.pressedFretIndex = pressedFretIndex
-        getFretMatrix(pressedFretIndex: pressedFretIndex)
-        self.displayChord = displayChord
-        self.stringsEnabled = stringsEnabled
-        self.capoOnFret = capoOnFret
-    }
-   
     func setChordArrray() {
         chordArray = []
         for index in stringScaleIndex {
@@ -275,7 +263,7 @@ class GuitarChordModel: ObservableObject {
         displayChord = ""
     }
     
-    func getFretMatrix(pressedFretIndex: [Int]) {
+    func updateFretMatrix(pressedFretIndex: [Int]) {
         clearAll()
         
         for stringIndex in 0..<(pressedFretIndex.count) {

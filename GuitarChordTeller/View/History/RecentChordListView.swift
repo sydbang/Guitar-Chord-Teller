@@ -27,13 +27,12 @@ struct RecentChordListView: View {
                         ForEach(chords, id: \.self) { chord in
                             
                             HStack {
-                                NavigationLink (destination: GuitarFretView()
-                                    .environmentObject(GuitarChordModel(
-                                        stringScaleIndex: chord.stringScaleIndex,
-                                        pressedFretIndex: chord.fretPressedIndex,
-                                        displayChord: chord.name,
-                                        stringsEnabled: chord.stringsEnabled as! [Bool],
-                                        capoOnFret: chord.capoLocation as! Int? )),
+                                NavigationLink (destination: ChordGuitarFretView(
+                                    stringScaleIndex: chord.stringScaleIndex, 
+                                    displayChord: chord.name,
+                                    fretPressedIndex: chord.fretPressedIndex,
+                                    stringsEnabled: chord.stringsEnabled as! [Bool],
+                                    capoLocation: chord.capoLocation as! Int?),
                                                 label: {
                                     Text(chord.name)
                                 })

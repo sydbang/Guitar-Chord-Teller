@@ -13,8 +13,10 @@ struct CapoView: View {
     @EnvironmentObject var userDefaults:UserSettings
     
     @State var fretNum: Int
+    var capoLocation: Int? = nil
+    
     var body: some View {
-        if fretNum == userChord.capoOnFret {
+        if fretNum == userChord.capoOnFret || fretNum == capoLocation {
             HStack {
                 VStack {
                     Image(systemName: "arrowtriangle.up.circle.fill")
