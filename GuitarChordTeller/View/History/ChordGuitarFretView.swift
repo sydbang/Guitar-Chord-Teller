@@ -41,7 +41,7 @@ struct ChordGuitarFretView: View {
                         .lineLimit(2)
                         .padding(10)
                     
-                    GuitarNoteView()
+                    ChordGuitarNoteView(stringsEnabled: stringsEnabled, pressedFretIndex: fretPressedIndex, stringScaleIndex: stringScaleIndex)
                         .padding(.horizontal, geo.size.width/14)
                     
                     Divider()
