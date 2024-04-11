@@ -42,6 +42,7 @@ struct GuitarFretView: View {
                                 userChord.clearAll()
                                 userChord.capoOnFret = nil
                             } else {
+                                userChord.clearAll()
                                 userChord.capoOnFret = 0
                             }
                         } label: {

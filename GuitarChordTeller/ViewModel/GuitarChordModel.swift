@@ -50,7 +50,6 @@ class GuitarChordModel: ObservableObject {
         getFretMatrix(pressedFretIndex: pressedFretIndex)
         self.displayChord = displayChord
         self.stringsEnabled = stringsEnabled
-        print(capoOnFret)
         self.capoOnFret = capoOnFret
     }
    
