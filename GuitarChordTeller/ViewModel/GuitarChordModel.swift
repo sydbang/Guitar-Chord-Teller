@@ -243,8 +243,16 @@ class GuitarChordModel: ObservableObject {
         }
         
         let newIndex = PressedFretIndex + currentIndex 
-        return chord.grabNoteOnC(index: newIndex)
+        return grabNoteOnC(index: newIndex)
         
+    }
+    
+    func grabNoteOnC(index: Int) -> String {
+        var i = index
+        while  i > chord.scaleArray.count-1 {
+            i = i % chord.scaleArray.count
+        }
+        return chord.scaleArray[i]
     }
     
     func clearAll() {

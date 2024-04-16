@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ChordGuitarNoteView: View {
+    @EnvironmentObject var userChord:GuitarChordModel
     @EnvironmentObject var userDefaults:UserSettings
     
     var stringsEnabled: [Bool]
@@ -20,9 +21,9 @@ struct ChordGuitarNoteView: View {
                 Spacer()
                 if stringsEnabled[index] == true {
                     if pressedFretIndex[index] == 0 {
-                        Text(GuitarChord().grabNoteOnC(index: stringScaleIndex[index]))
+                        Text(userChord.grabNoteOnC(index: stringScaleIndex[index]))
                     } else {
-                        Text(GuitarChord().grabNoteOnC(index: stringScaleIndex[index]+pressedFretIndex[index]))
+                        Text(userChord.grabNoteOnC(index: stringScaleIndex[index]+pressedFretIndex[index]))
                     }
                     
                 } else {
