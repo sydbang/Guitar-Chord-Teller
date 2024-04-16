@@ -271,7 +271,7 @@ class GuitarChordModel: ObservableObject {
     
     func checkIfPressed(inputString: Int, inputFret: Int, pressedFretIndex: [Int]) -> Bool {
         for (stringNum, fretNumber) in pressedFretIndex.enumerated() {
-            if stringNum == inputString && fretNumber == inputFret {
+            if stringNum == inputString && fretNumber-1 == inputFret {
                 return true
             }
         }
