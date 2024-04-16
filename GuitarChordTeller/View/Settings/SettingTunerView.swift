@@ -27,13 +27,10 @@ struct SettingTunerView: View {
             HStack {
                 ForEach ((0..<Constants.stringCount).reversed(), id: \.self) { index in
                     Picker("\(index) string index", selection: $userChord.stringScaleIndex[index]) {
-                        ForEach(0..<userChord.chord.scaleArray.count) { scaleIndex in
+                        ForEach(0..<userChord.chord.scaleArray.count, id: \.self) { scaleIndex in
                             Text(userChord.chord.scaleArray[scaleIndex]).tag(scaleIndex)
                         }
                     }
-                    .frame(width: 35)
-                    .clipped()
-                    .compositingGroup()
                 }
             }
         }
