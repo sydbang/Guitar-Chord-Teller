@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ChordGuitarFretView: View {
+    @EnvironmentObject var userChord:GuitarChordModel
     @EnvironmentObject var userDefaults:UserSettings
     
     var stringScaleIndex: [Int]
@@ -59,7 +60,7 @@ struct ChordGuitarFretView: View {
                                     ForEach(userDefaults.stringsIndex, id: \.self) { j in
                                         Spacer()
                                         GuitarFretButton(
-                                            pressed: false, // TODO: need calc
+                                            pressed: userChord.checkIfPressed(inputString: j, inputFret: i, pressedFretIndex: fretPressedIndex),
                                             enabled: stringsEnabled[j],
                                             fret: i,
                                             string: j,

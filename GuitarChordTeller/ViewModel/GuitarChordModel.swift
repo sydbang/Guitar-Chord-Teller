@@ -269,6 +269,15 @@ class GuitarChordModel: ObservableObject {
         displayChord = ""
     }
     
+    func checkIfPressed(inputString: Int, inputFret: Int, pressedFretIndex: [Int]) -> Bool {
+        for (stringNum, fretNumber) in pressedFretIndex.enumerated() {
+            if stringNum == inputString && fretNumber == inputFret {
+                return true
+            }
+        }
+        return false
+    }
+    
     func updateFretMatrix(pressedFretIndex: [Int]) {
         clearAll()
         
