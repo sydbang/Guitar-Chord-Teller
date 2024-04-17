@@ -14,11 +14,7 @@ struct GuitarFretView: View {
     @EnvironmentObject var userDefaults:UserSettings
     
     var tuning: String {
-        if userChord.stringScaleIndex == [4, 11, 7, 2, 9, 4] {
-            return "Standard tuning"
-        } else {
-            return "Not standard tuning"
-        }
+        userChord.checkTuning()
     }
     
     var capoText: String {

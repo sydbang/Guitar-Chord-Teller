@@ -208,6 +208,13 @@ class GuitarChordModel: ObservableObject {
         }
     }
     
+    func checkTuning() -> String {
+        if let tuningName = chord.tunings[stringScaleIndex] {
+            return tuningName
+        }
+        return "Not standard tuning"
+    }
+
     func getChord() {
         let baseInfo = grabBase()
         let chordInfo = setChord()
