@@ -45,10 +45,8 @@ struct GuitarFretButton: View {
             if fret < capoOnFret {
                 return true
             }
-        } else {
-            return !enabled
         }
-        return false
+        return !enabled
     }
     
 }
